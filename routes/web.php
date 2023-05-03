@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+//Route::group(['middleware' => 'auth'], function () {});
+Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/infor', [InfoController::class, 'infor'])->name('infor');
