@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controller\InforController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,4 @@ Route::get('/', function () {
 });
 //Route::group(['middleware' => 'auth'], function () {});
 Route::get('/', [HomeController::class, 'index'])->name('index');
-Route::get('/infor', [InfoController::class, 'infor'])->name('infor');
+Route::get('/infor', [InforController::class, 'infor'])->name('infor');
