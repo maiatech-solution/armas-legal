@@ -1,7 +1,6 @@
 @extends('template')
 @section('content')
-    <h1></h1>
-    <main class="flex flex-col lg:flex-row h-[100vh]">
+    <main class="flex flex-col lg:flex-row h-[100vh] bg-slate-900 text-white">
       <section class=" w-[100vw] lg:w-[70vw] h-[100vh] flex border-r-2">
         <img src="./imgs/fuzil.jpg" class="bg-cover bg-transparent" alt="">
       </section>
