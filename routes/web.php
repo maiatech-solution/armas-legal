@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controller\InforController;
+use App\Http\Controllers\InforController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
