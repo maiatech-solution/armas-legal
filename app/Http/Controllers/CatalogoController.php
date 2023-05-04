@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Arma;
 
 class CatalogoController extends Controller
 {
@@ -13,7 +14,8 @@ class CatalogoController extends Controller
      */
     public function index()
     {
-        //
+        $arma = Arma::paginate(40);
+        return view('catalogo', ['armas', $arma]);
     }
 
     /**
