@@ -1,11 +1,10 @@
 @extends('template')
 @section('content')
-    <h1></h1>
-    <main class="flex flex-col lg:flex-row h-[100vh]">
-      <section class=" w-[100vw] lg:w-[70vw] h-[100vh] flex border-r-2">
+    <main class="flex flex-col lg:flex-row lg:h-[100vh] bg-slate-900 text-white">
+      <section class=" w-[100%] lg:w-[70vw]  mb-4 lg:mb-0 v-[50vh] flex lg:border-r-2 lg:border-b-0 border-b-2">
         <img src="./imgs/fuzil.jpg" class="bg-cover bg-transparent" alt="">
       </section>
-      <section class="items-center flex flex-col lg:w-[30vw] w-[95%] h-[80%] justify-center m-auto">
+      <section class="items-center flex flex-col p-4 lg:p-0  h-[900px] lg:w-[30vw] w-[100%]  justify-center m-auto">
         <div class="w-[100px]"><img src="./imgs/logo-fas-atual.png" alt=""></div>
         <div class="m-8"><h2>Entre com suas credênciais</h2></div>
         <form action="{{route('login')}}" class=" w-[100%] flex flex-col gap-4">

@@ -8,7 +8,7 @@
     @vite(['resources/css/app.css','resources/js/app.js'])
     <title>Arma Legal</title>
 </head>
-<body class="bg-slate-950 text-white">
+<body class="bg-gray-200">
    @yield('content')
 
    @livewireScripts
