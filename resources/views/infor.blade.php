@@ -25,7 +25,7 @@
                 abaixo discriminados.
             </p>
 
-            <span class="text-center mb-8">Estes processos são regulados pela Portaria nº 069/2019 - GAB. CMDº
+            <span class="text-center mb-8 ">Estes processos são regulados pela Portaria nº 069/2019 - GAB. CMDº
                 (Publicada no Adti. ao BG 078 II - 24 ABRIL 2019).</span>
 
                 <div id="accordion-collapse" data-accordion="collapse" class="w-[70%] m-auto mb-8">
