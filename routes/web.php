@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InforController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AssociadoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,6 @@ use App\Http\Controllers\HomeController;
 
 //Route::group(['middleware' => 'auth'], function () {});
 Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::post('/login', [AssociadoController::class, 'store'])->name('login');
 Route::get('/infor', [InforController::class, 'infor'])->name('infor');
+Route::get('/catalogo', [HomeController::class, 'store'])->name('catalogo');

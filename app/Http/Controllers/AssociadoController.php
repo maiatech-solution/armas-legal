@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Associado;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class AssociadoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        //
     }
 
     /**
@@ -34,7 +35,16 @@ class HomeController extends Controller
      */
     public function store(Request $request)
     {
-        return view('catalogo');
+        $creds = $request->only('cpf','matricula', 'cpf');
+
+        $dados = Associado::where('cpf')
+
+        $validated = $request->validate([
+            'cpf' => ['required', 'string', 'min:10', 'max:11'],
+            'matricula' => ['required', 'string'],
+            'nome' => [']required', 'string'],
+        ]);
+        return redirect('/catalogo');
     }
 
     /**
