@@ -53,7 +53,7 @@
                             <ul class=" space-y-1  list-disc list-inside dark:text-gray-400 p-4">
                                 <li>
                                     00 - Capa e certidão, devidamente preenchida pelo computador.
-                                    <a class="text-black font-bold" href="../Docs/Capa de Processo de Aquisição.docx" download>
+                                    <a class="text-blue-600 font-bold" href="../Docs/Capa de Processo de Aquisição.docx" download>
                                         - CAPA DO PROCESSO DE AQUISIÇÃO
                                     </a>
                                     - CERTIDÃO DO PROCESSO DE AQUISIÇÃO. IMPRIMA, COLE A FOTO NA CAPA
@@ -68,11 +68,11 @@
                                 <li>
                                     02 - Declaração do CMT de acordo com § 1º do Art. 12, da Port.
                                     069/2019 - GAB. CMD°, Adit ao BG Nº 078 de 24 de Abril de 2019.
-                                    <a class="text-black font-bold" href="../Docs/dec_cmt_4.doc" download>(Modelo)</a>
+                                    <a class="text-blue-600 font-bold" href="../Docs/dec_cmt_4.doc" download>(Modelo)</a>
                                     - PODE SER ASSINADA ELETRÔNICAMENTE.
                                 </li>
 
-                                <li>03 - Identidade Militar (cópia). LEGÍVEL</li>
+                                <li>03 - Identidade Militar (cópia) LEGÍVEL.</li>
 
                                 <li>
                                     04 - Foto 3x4 (fardado). COLE NA CAPA DO PROCESSO E ESCANEIE A
@@ -82,8 +82,7 @@
                                 <li>
                                     05 - Comprovante de residência no nome do policial ou, caso não
                                     possua, baixe a declaração de residência.
-                                    <a class="text-black font-bold" href="../Docs/Declaração_de_Residência.doc" download>(Baixe
-                                        aqui)</a>
+                                    <a class="text-blue-600 font-bold" href="../Docs/Declaração_de_Residência.doc" download>(Baixe aqui)</a>
                                 </li>
 
                                 <li>
@@ -94,7 +93,7 @@
                                 <li>
                                     07 - Taxa GRU (Guia de recolhimento da união), com comprovante de
                                     pagamento -
-                                    <a class="text-black font-bold"
+                                    <a class="text-blue-600 font-bold"
                                         href="https://consulta.tesouro.fazenda.gov.br/gru_novosite/gru_simples.asp"
                                         target="_blank">(clique para ir para o site)</a>
                                 </li>
@@ -149,26 +148,89 @@
                     </h2>
                     <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
                         <div class="border border-b-0 text-gray-900 bg-white border-blue-500 p-4 dark:border-gray-700">
-                            <p class="mb-2 ">
-                                Flowbite is first conceptualized and designed using the Figma
-                                software so everything you see in the library has a design
-                                equivalent in our Figma file.
-                            </p>
-                            <p class=" dark:text-gray-400">
-                                Check out the
-                                <a href="https://flowbite.com/figma/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based on the utility classes from Tailwind CSS and codsaamponents
-                                from Flowbite.
-                            </p>
+                            <ul class=" space-y-1  list-disc list-inside dark:text-gray-400 p-4">
+                                <li>
+                                    Capa e certidão, devidamente preenchida pelo computador. CAPA DO PROCESSO DE TRANSFERÊNCIA - CERTIDÃO DO PROCESSO DE TRANSFERÊNCIA. IMPRIMA, COLE A FOTO NA CAPA E ESCANEIE.
+                                </li>
+
+                                <li>
+                                    01 - Requerimento padrão <a class="text-blue-600 font-bold" href="../Docs/PAF.doc" download>(Modelo)</a>. PREENCHA, IMPRIMA, ASSINE E ESCANEIE.
+                                </li>
+
+                                <li>
+                                    02 - Declaração do CMT de acordo com § 1º do Art. 12, da Port.
+                                    069/2019 - GAB. CMD°, Adit ao BG Nº 078 de 24 de Abril de 2019.
+                                    <a class="text-blue-600 font-bold" href="../Docs/dec_cmt_4.doc" download>(Modelo)</a>
+                                    - PODE SER ASSINADA ELETRÔNICAMENTE.
+                                </li>
+
+                                <li>03 - Parecer médico: emitido pela Junta Regular de Saúde (JRS) da PM PA, atestando que o policial militar inativo não possui contra indicação física para portar arma de fogo. (SOMENTE PRA QUEM JÁ ESTÁ AFASTADO(A) À 5 OU MAIS ANOS, OU SEJA REFORMADO).</li>
+
+                                <li>
+                                    04 - Parecer psicológico emitido pelo Centro Integrado de Atenção Psicossocial (CIAP) da PMPA, atestando que o policial militar inativo não possui contra indicação psicológica para portar arma de fogo. (SOMENTE PRA QUEM JÁ ESTÁ AFASTADO(A) À 5 OU MAIS ANOS, OU SEJA REFORMADO).
+                                </li>
+
+                                <li>
+                                    05 - Identidade Militar (cópia) LEGÍVEL.</a>
+                                </li>
+
+                                <li>
+                                    06 - Foto 3x4. COLE NA CAPA DO PROCESSO E ESCANEIE A CAPA COM ELA.
+                                </li>
+
+                                <li>
+                                    07 - Taxa GRU (Guia de recolhimento da união), com comprovante de
+                                    pagamento -
+                                    <a class="text-blue-600 font-bold"
+                                        href="https://consulta.tesouro.fazenda.gov.br/gru_novosite/gru_simples.asp"
+                                        target="_blank">(clique para ir para o site)</a>.
+                                </li>
+
+                                <li>
+                                    08 - Ficha de apresentação do SIGPOL com filiação e pecúlio, dados funcionais, tempo de serviço e situações funcionais aberto.
+                                </li>
+
+                                <li>
+                                    09 - Certidões Negativas:
+                                    <ul class="pl-5 mt-2 space-y-1 list-disc list-inside">
+                                        <li>
+                                            <a href="https://portal.trf1.jus.br/Servicos/Certidao/">JUSTIÇA FEDERAL;</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://consultas.tjpa.jus.br/certidao/pages/pesquisaGeralCentralCertidao.action">JUSTIÇA
+                                                ESTADUAL;</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://www.stm.jus.br/servicos-stm/certidao-negativa/emitir-certidao-negativa">JUSTIÇA
+                                                MILITAR FEDERAL;</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://consultas.tjpa.jus.br/certidaomilitar/pages/InicioCertidao.action">JUSTIÇA
+                                                MILITAR ESTADUAL;</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://www.tse.jus.br/servicos-eleitorais/certidoes/certidao-de-crimes-eleitorais">JUSTIÇA
+                                                ELEITORAL;</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://antecedentes.policiacivil.pa.gov.br/consulta">POLÍCIA CIVIL;</a>
+                                        </li>
+                                        <li>CORREGEDORIA PM. (VIA PAE OU PRESENCIAL)</li>
+                                    </ul>
+                                </li>
+
+                            </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="w-[70%] border border-black m-auto mb-4 mt-4"></div>
+                <div class="w-[70%] border border-blue-600 m-auto mb-4 mt-4"></div>
 
+                <h2 class="text-center text-2xl mb-4 font-bold">DADOS PARA GERAÇÃO DA GRU.</h2>
                 <div class="overflow-x-auto mb-8">
-                    <h2 class="text-center text-2xl mb-2 font-bold">DADOS PARA GERAÇÃO DA GRU.</h2>
                     <table class="w-[70%] m-auto text-sm text-white bg-gray-800 text-left">
                         <thead class="text-xs w-screen uppercase dark:text-gray-400">
                             <tr class=" text-center">
