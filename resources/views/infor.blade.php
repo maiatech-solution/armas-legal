@@ -133,6 +133,7 @@
                             </ul>
                         </div>
                     </div>
+
                     <h2 id="accordion-collapse-heading-2">
                         <button type="button"
                         class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-blue-600  focus:ring-4 bg-blue-600 focus:ring-gray-200 hover:bg-gray-600"                            data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
@@ -146,6 +147,7 @@
                             </svg>
                         </button>
                     </h2>
+
                     <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
                         <div class="border border-b-0 text-gray-900 bg-white border-blue-500 p-4 dark:border-gray-700">
                             <ul class=" space-y-1  list-disc list-inside dark:text-gray-400 p-4">
