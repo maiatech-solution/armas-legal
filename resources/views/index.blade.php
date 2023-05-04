@@ -8,20 +8,29 @@
             <div class="w-[100px]"><img src="./imgs/logo-fas-atual.png" alt=""></div>
             <div class="m-8">
                 <h2>Entre com suas credênciais</h2>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </div>
             <form action="{{ route('login') }}" class=" w-[100%] flex flex-col gap-4">
                 @csrf
                 <div class="flex flex-col justify-between items-center">
                     <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" class="w-[70%] rounded-xl text-black">
+                    <input type="text" id="nome" name="nome" class="w-[70%] rounded-xl text-black" value="{{ old('nome') }}" required>
                 </div>
                 <div class="flex  flex-col justify-between items-center">
                     <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" class="w-[70%] rounded-xl text-black">
+                    <input type="text" id="cpf" name="cpf" class="w-[70%] rounded-xl text-black" value="{{ old('cpf') }}" max="11" placeholder="Digite apenas os numeros do CPF" required>
                 </div>
                 <div class="flex  flex-col justify-between items-center">
                     <label for="matricula">Matrícula:</label>
-                    <input type="text" id="matricula" name="matricula" class="w-[70%] rounded-xl text-black">
+                    <input type="text" id="matricula" name="matricula" class="w-[70%] rounded-xl text-black" value="{{ old('matricula') }}" placeholder="Digite a MF sem o dígito verificador" required>
                 </div>
                 <div class="flex mt-4 flex-col justify-between items-center">
                     <button type="submit"

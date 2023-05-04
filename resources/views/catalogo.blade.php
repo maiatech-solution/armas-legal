@@ -30,6 +30,8 @@
                     <!-- Pistolas ---->
                     <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col flex-wrap mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Pistolas</h2>
+
+                        @foreach ($armas as $arma)
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
                             <div
                                 class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
@@ -39,9 +41,9 @@
                                         alt="pistola taurus">
                                 </div>
                                 <div class="text-center flex flex-col text-white gap-2">
-                                    <p>TS9C GRAPHENE - 9MM</p>
-                                    <span>Calibre: 9mm (9x19)</span>
-                                    <span>Capacidade: 13+1 e 17+1</span>
+                                    <p>{{$arma->nome}}</p>
+                                    <span>{{$arma->calibre}}</span>
+                                    <span>{{$arma->capacidade_tiro}}</span>
 
                                     <!-- Modal toggle -->
                                     <button data-modal-target="defaultModal" data-modal-toggle="defaultModal"
@@ -246,6 +248,7 @@
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>
 
 

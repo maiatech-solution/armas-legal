@@ -19,6 +19,6 @@ use App\Http\Controllers\CatalogoController;
 
 //Route::group(['middleware' => 'auth'], function () {});
 Route::get('/', [HomeController::class, 'index'])->name('index');
-Route::post('/login', [AssociadoController::class, 'store'])->name('login');
+Route::get('/login', [AssociadoController::class, 'store'])->name('login');
 Route::get('/infor', [InforController::class, 'infor'])->name('infor');
-Route::get('/catalogo', [HomeController::class, 'store'])->name('catalogo');
+Route::get('/catalogo', [CatalogoController::class, 'index'])->name('catalogo');

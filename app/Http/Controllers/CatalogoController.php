@@ -14,7 +14,8 @@ class CatalogoController extends Controller
      */
     public function index()
     {
-        $arma = Arma::paginate(40);
+        $arma = Arma::all();
+
         return view('catalogo', ['armas', $arma]);
     }
 

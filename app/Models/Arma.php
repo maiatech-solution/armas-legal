@@ -12,6 +12,7 @@ class Arma extends Model
 
     protected $fillable = [
         'foto',
+        'nome',
         'fabricante',
         'tipo',
         'calibre',
