@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Arma;
 
-class CatalogoController extends Controller
+class SimuladorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +13,7 @@ class CatalogoController extends Controller
      */
     public function index()
     {
-        $arma = Arma::all();
-
-        return view('catalogo', ['armas'=> $arma]);
+        return view('simulador');
     }
 
     /**

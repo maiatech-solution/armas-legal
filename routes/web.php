@@ -22,3 +22,4 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/login', [AssociadoController::class, 'store'])->name('login');
 Route::get('/infor', [InforController::class, 'infor'])->name('infor');
 Route::get('/catalogo', [CatalogoController::class, 'index'])->name('catalogo');
+Route::get('/simulador', [SimuladorController::class, 'index'])->name('simulador');
