@@ -279,10 +279,9 @@
                     </table>
                 </div>
                 <div class="text-center">
-                    <a href="{{ route('catalogo') }}"
-                    target="_blank">
-                        <button type="button" class="font-semibold underline hover:no-underline uppercase">
-                            VOLTAR PARA O CATÁLOGO
+                    <a href="{{ route('catalogo') }}">
+                        <button type="button" class="font-semibold hover:no-underline uppercase bg-blue-600 hover:bg-blue-700 border p-4 rounded-md mb-8 border-blue-700 text-white">
+                            IR PARA O CATÁLOGO
                         </button>
                     </a>
                 </div>
