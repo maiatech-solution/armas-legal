@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Arma;
 
 class SimuladorController extends Controller
 {
@@ -11,9 +12,9 @@ class SimuladorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('simulador');
+        //return view('simulador');
     }
 
     /**
@@ -45,7 +46,8 @@ class SimuladorController extends Controller
      */
     public function show($id)
     {
-        //
+        $arma = Arma::find($id);
+        return view('simulador', ['armas'=>$arma]);
     }
 
     /**

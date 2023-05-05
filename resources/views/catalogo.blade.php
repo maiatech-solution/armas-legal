@@ -169,26 +169,36 @@
                                                                 <tr class="text-center">
                                                                     <td scope="row" class="px-6 py-4 border">CALIBRE
                                                                         </th>
-                                                                    <td scope="row" class="px-6 py-4 border">9MM (9X19)
+                                                                    <td scope="row" class="px-6 py-4 border">{{$arma->calibre}}
                                                                     </td>
                                                                 </tr>
 
                                                                 <tr class="text-center">
-                                                                    <td scope="row" class="px-6 py-4 border">CANO</th>
-                                                                    <td scope="row" class="px-6 py-4 border">94MM / 3.7
-                                                                        / 6 RAIAS À DIREITA</td>
+                                                                    <td scope="row" class="px-6 py-4 border">ACABAMENTO</th>
+                                                                    <td scope="row" class="px-6 py-4 border">{{$arma->acabamento}}
+                                                                    </td>
                                                                 </tr>
 
                                                                 <tr class="text-center">
-                                                                    <td scope="row" class="px-6 py-4 border">PESO</th>
-                                                                    <td scope="row" class="px-6 py-4 border">785g /
-                                                                        27,69oz</td>
+                                                                    <td scope="row" class="px-6 py-4 border">CAPACIDADE DE TIRO</th>
+                                                                    <td scope="row" class="px-6 py-4 border">{{$arma->capacidade_tiro}}
+                                                                </td>
                                                                 </tr>
 
                                                                 <tr class="text-center">
-                                                                    <td scope="row" class="px-6 py-4 border">AÇÃO</th>
-                                                                    <td scope="row" class="px-6 py-4 border">Strike
-                                                                        Fire</td>
+                                                                    <td scope="row" class="px-6 py-4 border">SIST. DE FUNCIONAMENTO</th>
+                                                                    <td scope="row" class="px-6 py-4 border">{{$arma->sistema_funcionamento}}
+                                                                        </td>
+                                                                </tr>
+                                                                <tr class="text-center">
+                                                                    <td scope="row" class="px-6 py-4 border">RAIAS/SENTIDO</th>
+                                                                    <td scope="row" class="px-6 py-4 border">{{$arma->qtd_raias}} / {{$arma->sentido_raias}}
+                                                                        </td>
+                                                                </tr>
+                                                                <tr class="text-center">
+                                                                    <td scope="row" class="px-6 py-4 border">QTD CANO / COMPRIMENTO</th>
+                                                                    <td scope="row" class="px-6 py-4 border">{{$arma->qtd_cano}} / {{$arma->comprimento_cano}}
+                                                                        </td>
                                                                 </tr>
 
                                                             </table>
@@ -209,21 +219,27 @@
                                                                 </tr>
 
                                                                 <tr class="text-center">
+                                                                    <td scope="row" class="px-6 py-4 border">PAÍS DE FABRICAÇÃO
+                                                                        </th>
+                                                                    <td scope="row" class="px-6 py-4 border">{{$arma->pais_fabricacao}}
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="text-center">
                                                                     <td scope="row" class="px-6 py-4 border">ESPÉCIE
                                                                         </th>
-                                                                    <td scope="row" class="px-6 py-4 border">PISTOLA
+                                                                    <td scope="row" class="px-6 py-4 border">{{$arma->tipo}}
                                                                     </td>
                                                                 </tr>
 
                                                                 <tr class="text-center">
                                                                     <td scope="row" class="px-6 py-4 border">MARCA</th>
-                                                                    <td scope="row" class="px-6 py-4 border">TAURUS
+                                                                    <td scope="row" class="px-6 py-4 border">{{$arma->fabricante}}
                                                                     </td>
                                                                 </tr>
 
                                                                 <tr class="text-center">
-                                                                    <td scope="row" class="px-6 py-4 border">PREÇO</th>
-                                                                    <td scope="row" class="px-6 py-4 border">4.000,00
+                                                                    <td scope="row" class="px-6 py-4 border">PREÇO À VISTA</th>
+                                                                    <td scope="row" class="px-6 py-4 border"> R$ {{$arma->preco}},00
                                                                     </td>
                                                                 </tr>
 
@@ -237,9 +253,9 @@
                                                     class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600 w-full">
                                                     <button data-modal-hide="defaultModal" type="button"
                                                         class="text-white w-[30%] bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Fechar</button>
-                                                    <button href="{{route('simulador',  ['id'=>$arma->id]))}}" data-modal-hide="defaultModal" type="button"
+                                                    <a href="{{route('simulador',  ['id'=>$arma->id])}}"><button  data-modal-hide="defaultModal" type="button"
                                                         class="text-white w-[70%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Simular
-                                                        Financiamento</button>
+                                                        Financiamento</button></a>
                                                 </div>
                                             </div>
                                         </div>

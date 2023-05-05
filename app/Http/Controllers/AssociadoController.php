@@ -35,13 +35,18 @@ class AssociadoController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->only('cpf', 'matricula', 'cpf');
+        //$data = $request->only('cpf', 'matricula', 'cpf');
 
         $validated = $request->validate([
             'cpf' => 'required|string|min:10|max:11',
             'matricula' => 'required|string',
             'nome' => 'required|string',
         ]);
+
+        $validated = $request->validated();
+
+        $validated = $request->safe()->only(['cpf', 'matricula', 'nome']);
+
 
         $query = Associado::where('cpf');
 
