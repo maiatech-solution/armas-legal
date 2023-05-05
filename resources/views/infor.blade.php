@@ -286,12 +286,7 @@
                         </button>
                     </a>
                 </div>
-
-
         </div>
-
-
-
 
     </main>
 @endsection
