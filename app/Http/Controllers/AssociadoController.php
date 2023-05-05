@@ -35,7 +35,11 @@ class AssociadoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request){
-        if(session()->has('usuario')){
+
+       if(session()->has('usuario')){
+            return redirect()->route('catalogo');
+        }else{
+
             $request->validate([
                 'cpf' => 'required|string|min:10|max:11',
                 'matricula' => 'required|string',
@@ -49,12 +53,13 @@ class AssociadoController extends Controller
             ->where('nome', $request->nome)
             ->first();
 
-            session()->put('associado', $associado->nome);
+            if($associado){
+                session()->put('associado', $request->nome);
 
-
-            return view('teste', ['associado'=> $associado]);
+                return redirect()->route('catalogo');
             }else{
-            return redirect()->route('catalogo');
+                return back()->with('error', 'Dados incorretos!');
+            }
             }
     }
 
@@ -78,6 +83,10 @@ class AssociadoController extends Controller
     public function edit($id)
     {
         //
+    }
+    public function teste(){
+        session()->remove('associado');
+        return redirect()->route('index');
     }
 
 }
