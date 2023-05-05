@@ -30,9 +30,11 @@
         </div>
 
         <div class="flex justify-center flex-col m-8 h-[100%]">
-            <h1 class="text-center font-bold mb-8 text-4xl uppercase">
-                Aquisição de Armas de Fogo
+            <h1 class="text-center font-bold mb-2 text-4xl uppercase">
+                Documentos de Autorização para Aquisição de Armas de Fogo
             </h1>
+
+            <a class="text-center text-blue-800 mb-8" href="https://www.pm.pa.gov.br/component/content/article/91-artigos-gerais/171-aquisicao-de-armas-de-fogo.html" target="_blank">(Mais informações no site da PM)</a>
 
             <p class="text-center">
                 A Seção de Intendência e Subsistência, subordinada à Diretoria de Apoio
@@ -260,7 +262,7 @@
                             <tr class=" text-center">
                                 <th scope="col" class="px-6 py-3 border">UNIDADE GESTORA (GU)</th>
                                 <th scope="col" class="px-6 py-3 border">GESTÃO</th>
-                                <th scope="col" class="px-6 py-3 border">NPOME DA UNIDADE</th>
+                                <th scope="col" class="px-6 py-3 border">NOME DA UNIDADE</th>
                                 <th scope="col" class="px-6 py-3 border">CÓDIGO DO RECOLHIMENTO</th>
                                 <th scope="col" class="px-6 py-3 border">Nº DE REFERÊNCIA</th>
                                 <th scope="col" class="px-6 py-3 border">VALOR(R$)</th>
