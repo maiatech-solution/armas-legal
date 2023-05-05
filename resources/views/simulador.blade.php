@@ -4,7 +4,7 @@
         <div class="bg-zinc-800 flex items-center justify-center border border-white flex-col lg:w-[50%] m-auto">
             <div id="title" class="w-[100%] h-[5em] flex justify-center items-center text-gray-300 flex-col bg-zinc-950">
                 <h1 class="text-bold text-2xl">SIMULADOR DE PREÇOS</h1>
-                <small class="text-sm">(OBS: Como já diz, isso é uma simulação, os preços podem variar)</small>
+                <small class="text-sm">(OBS: Aqui é apenas uma simulação, os valores podem variar)</small>
             </div>
 
             <div class="w-[100%] h-[25em] p-4 bg-zinc-400 flex flex-col justify-around items-center">
@@ -15,7 +15,7 @@
                 <div class="h-[10em] justify-between items-center flex w-[50%] lg:flex-row flex-col overflow-hidden gap-4">
                     <Label class="font-bold text-xl" for="arma">Valor da Arma: </Label>
                     <input class="outline-none w-[7em] text-1xl p-2 border-none font-bold text-center" type="number"
-                        name="arma" id="arma" value="">
+                        name="arma" id="arma" value="{{$armas->preco}}">
                 </div>
 
                 <span class="text-orange-600 font-bold text-left" id="span-infor">(Máximo 24 vezes)</span>
