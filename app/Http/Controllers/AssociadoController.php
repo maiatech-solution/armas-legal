@@ -34,11 +34,12 @@ class AssociadoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request){
+    public function store(Request $request)
+    {
 
-       if(session()->has('usuario')){
+        if (session()->has('usuario')) {
             return redirect()->route('catalogo');
-        }else{
+        } else {
 
             $request->validate([
                 'cpf' => 'required|string|min:10|max:11',
@@ -49,18 +50,18 @@ class AssociadoController extends Controller
             $request->only(['cpf', 'matricula', 'nome']);
 
             $associado = Associado::where('cpf', $request->cpf)
-            ->where('matricula', $request->matricula)
-            ->where('nome', $request->nome)
-            ->first();
+                ->where('matricula', $request->matricula)
+                ->where('nome', $request->nome)
+                ->first();
 
-            if($associado){
+            if ($associado) {
                 session()->put('associado', $request->nome);
 
                 return redirect()->route('catalogo');
-            }else{
-                return back()->with('error', 'Dados incorretos!');
+            } else {
+                return redirect()->route('index');
             }
-            }
+        }
     }
 
     /**
@@ -84,9 +85,4 @@ class AssociadoController extends Controller
     {
         //
     }
-    public function teste(){
-        session()->remove('associado');
-        return redirect()->route('index');
-    }
-
 }

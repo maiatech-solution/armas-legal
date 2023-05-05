@@ -14,12 +14,14 @@ class CatalogoController extends Controller
      */
     public function index()
     {
-
-            $arma = Arma::all();
+        if(session()->has('associado')){
+        $arma = Arma::all();
 
         return view('catalogo', ['armas'=> $arma]);
 
-
+        }else{
+            return redirect()->route('index');
+        }
     }
 
     /**
