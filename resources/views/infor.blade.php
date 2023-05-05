@@ -31,10 +31,10 @@
                 <div id="accordion-collapse" data-accordion="collapse" class="w-[70%] m-auto mb-8">
                     <h2 id="accordion-collapse-heading-1" class="border-b-2">
                         <button type="button"
-                            class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-blue-600 rounded-t-xl focus:ring-4 bg-blue-600 focus:ring-gray-200 hover:bg-gray-600"
+                            class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-zinc-900 rounded-t-xl focus:ring-4 bg-zinc-900 focus:ring-gray-200 hover:bg-gray-900"
                             data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
                             aria-controls="accordion-collapse-body-1">
-                            <span class="text-white">AQUISIÇÃO DE ARMA DE FOGO - <span class="text-gray-900 font-bold">ATIVA</span></span>
+                            <span class="text-white">AQUISIÇÃO DE ARMA DE FOGO - <span class="text-blue-700 font-bold">ATIVA</span></span>
                             <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0 text-white" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -45,7 +45,7 @@
                     </h2>
                     <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1"
                         class="">
-                        <div class="p-5 border border-b-0 border-blue-500 bg-white">
+                        <div class="p-5 border border-b-0 border-zinc-900 bg-white">
                             <span>(Obs: OS DOCUMENTOS DEVEM SER ESCANEADOS NESSE SEGUINTE ORDEM, MAS
                                 A CERTIDÃO, QUE ESTÁ NO ITEM 00, DEVE FICAR NO FINAL DO
                                 PROCESSO.)</span><br />
@@ -136,9 +136,9 @@
 
                     <h2 id="accordion-collapse-heading-2">
                         <button type="button"
-                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-blue-600  focus:ring-4 bg-blue-600 focus:ring-gray-200 hover:bg-gray-600"                            data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-zinc-900 focus:ring-4 bg-zinc-900 focus:ring-gray-200 hover:bg-gray-900"data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
                             aria-controls="accordion-collapse-body-2">
-                            <span class="text-white">AQUISIÇÃO DE ARMA DE FOGO - <span class="text-gray-900 font-bold">RESERVA REMUNERADA E REFORMADOS</span> </span>
+                            <span class="text-white">AQUISIÇÃO DE ARMA DE FOGO - <span class="text-blue-700 font-bold">RESERVA REMUNERADA E REFORMADOS</span> </span>
                             <svg data-accordion-icon class="w-6 h-6 shrink-0 text-white" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -149,7 +149,7 @@
                     </h2>
 
                     <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-                        <div class="border border-b-0 text-gray-900 bg-white border-blue-500 p-4 dark:border-gray-700">
+                        <div class="border border-b-0 text-gray-900 bg-white border-zinc-900 p-4 dark:border-gray-700">
                             <ul class=" space-y-1  list-disc list-inside dark:text-gray-400 p-4">
                                 <li>
                                     Capa e certidão, devidamente preenchida pelo computador. CAPA DO PROCESSO DE TRANSFERÊNCIA - CERTIDÃO DO PROCESSO DE TRANSFERÊNCIA. IMPRIMA, COLE A FOTO NA CAPA E ESCANEIE.
@@ -233,7 +233,7 @@
 
                 <h2 class="text-center text-2xl mb-4 font-bold">DADOS PARA GERAÇÃO DA GRU.</h2>
                 <div class="overflow-x-auto mb-8">
-                    <table class="w-[70%] m-auto text-sm text-white bg-gray-800 text-left">
+                    <table class="w-[70%] m-auto text-sm text-white bg-zinc-800 text-left">
                         <thead class="text-xs w-screen uppercase dark:text-gray-400">
                             <tr class=" text-center">
                                 <th scope="col" class="px-6 py-3 border">UNIDADE GESTORA (GU)</th>
