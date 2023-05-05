@@ -14,9 +14,12 @@ class CatalogoController extends Controller
      */
     public function index()
     {
-        $arma = Arma::all();
+
+            $arma = Arma::all();
 
         return view('catalogo', ['armas'=> $arma]);
+
+
     }
 
     /**
