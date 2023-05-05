@@ -241,9 +241,7 @@
                                                         Fechar
                                                     </button>
 
-                                                    <button  data-modal-hide="defaultModal" type="button"
-                                                        class="text-white w-[70%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Simular
-                                                        <a href="{{route('simulador',  ['id'=>$arma->id])}}">Financiamento </a></button>
+                                                    <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5" href="{{route('simulador',  ['id'=>$arma->id])}}" target="_blank"><button type="button">Simular Financiamento </button></a>
 
                                                 </div>
                                             </div>
