@@ -31,15 +31,18 @@
                     <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col flex-wrap mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Pistolas</h2>
 
-                        @foreach ($armas as $arma)
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
+                            @foreach ($armas as $arma)
+                            <!-- Card da arma -->
                             <div
                                 class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
+                                <!-- Img da arma -->
                                 <div class="mb-4 w-[15em]">
                                     <img class="rounded-md"
                                         src="https://taurusarmas.com.br/assets/img/content/products/product-350-photo-2.jpg"
                                         alt="pistola taurus">
                                 </div>
+                                <!-- Corpo do card -->
                                 <div class="text-center flex flex-col text-white gap-2">
                                     <p>PT {{$arma->nome}}</p>
                                     <span>Calibre: {{$arma->calibre}}</span>
@@ -54,37 +57,19 @@
 
                                     <!-- Main modal -->
                                     <div id="defaultModal" tabindex="-1" aria-hidden="true"
-                                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] lg:max-h-full">
-                                        <div class="relative lg:w-[50em]">
+                                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-2rem)] lg:max-h-full">
+                                        <div class="relative m-auto  p-4">
                                             <!-- Modal content -->
-                                            <div class="relative bg-white rounded-lg  border border-red-700 shadow dark:bg-gray-700">
-                                                <!-- Modal header -->
-                                                <div
-                                                    class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-                                                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                                        DETALHES
-                                                    </h3>
-                                                    <button type="button"
-                                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                                                        data-modal-hide="defaultModal">
-                                                        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor"
-                                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd"
-                                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                                                clip-rule="evenodd"></path>
-                                                        </svg>
-                                                        <span class="sr-only">Close modal</span>
-                                                    </button>
-                                                </div>
+                                            <div class="relative  bg-white rounded-lg shadow dark:bg-gray-700">
                                                 <!-- Modal body -->
-                                                <div class="p-6 space-y-6">
+                                                <div class="p-6 rounded-t space-y-6">
 
                                                     <div id="default-carousel" class="lg:block hidden relative w-full"
                                                         data-carousel="slide">
                                                         <!-- Carousel wrapper -->
                                                         <div class="relative  w-full overflow-hidden rounded-lg lg:h-96">
                                                             <!-- Item 1 -->
-                                                            <div class="hidden duration-700 ease-in-out border border-red-800" data-carousel-item>
+                                                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                                                                 <img src="https://taurusarmas.com.br/assets/img/content/products/product-350-photo-1.jpg"
                                                                     class="absolute w-[20em] block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                                                     alt="...">
@@ -252,10 +237,14 @@
                                                 <div
                                                     class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600 w-full">
                                                     <button data-modal-hide="defaultModal" type="button"
-                                                        class="text-white w-[30%] bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Fechar</button>
-                                                    <a href="{{route('simulador',  ['id'=>$arma->id])}}"><button  data-modal-hide="defaultModal" type="button"
+                                                        class="text-white w-[30%] bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                        Fechar
+                                                    </button>
+
+                                                    <button  data-modal-hide="defaultModal" type="button"
                                                         class="text-white w-[70%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Simular
-                                                        Financiamento</button></a>
+                                                        <a href="{{route('simulador',  ['id'=>$arma->id])}}">Financiamento </a></button>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -263,8 +252,9 @@
 
                                 </div>
                             </div>
+                            @endforeach
                         </div>
-                        @endforeach
+
                     </div>
 
 
