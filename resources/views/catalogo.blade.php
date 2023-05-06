@@ -173,7 +173,7 @@
 
                                                         <div class="flex lg:flex-row flex-col gap-4 justify-center">
                                                             <div>
-                                                                <H3 class="text-black">DADOS TÉCNICOS</H3>
+                                                                <H3 class="text-black font-bold">DADOS TÉCNICOS</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -241,7 +241,7 @@
                                                             </div>
 
                                                             <div>
-                                                                <H3 class="text-black">INFORMAÇÕES</H3>
+                                                                <H3 class="text-black font-bold">INFORMAÇÕES</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -434,7 +434,7 @@
 
                                                         <div class="flex lg:flex-row flex-col gap-4 justify-center">
                                                             <div>
-                                                                <H3 class="text-black">DADOS TÉCNICOS</H3>
+                                                                <H3 class="text-black font-bold">DADOS TÉCNICOS</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -502,7 +502,7 @@
                                                             </div>
 
                                                             <div>
-                                                                <H3 class="text-black">INFORMAÇÕES</H3>
+                                                                <H3 class="text-black font-bold">INFORMAÇÕES</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -694,7 +694,7 @@
 
                                                         <div class="flex lg:flex-row flex-col gap-4 justify-center">
                                                             <div>
-                                                                <H3 class="text-black">DADOS TÉCNICOS</H3>
+                                                                <H3 class="text-black font-bold">DADOS TÉCNICOS</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -762,7 +762,7 @@
                                                             </div>
 
                                                             <div>
-                                                                <H3 class="text-black">INFORMAÇÕES</H3>
+                                                                <H3 class="text-black font-bold">INFORMAÇÕES</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -975,7 +975,7 @@
 
                                                         <div class="flex lg:flex-row flex-col gap-4 justify-center">
                                                             <div>
-                                                                <H3 class="text-black">DADOS TÉCNICOS</H3>
+                                                                <H3 class="text-black font-bold">DADOS TÉCNICOS</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -1043,7 +1043,7 @@
                                                             </div>
 
                                                             <div>
-                                                                <H3 class="text-black">INFORMAÇÕES</H3>
+                                                                <H3 class="text-black font-bold">INFORMAÇÕES</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -1116,7 +1116,6 @@
                                     </div>
                                 </div>
                             @endforeach
-
                         </div>
                     </div>
 
@@ -1236,7 +1235,7 @@
 
                                                         <div class="flex lg:flex-row flex-col gap-4 justify-center">
                                                             <div>
-                                                                <H3 class="text-black">DADOS TÉCNICOS</H3>
+                                                                <H3 class="text-black font-bold">DADOS TÉCNICOS</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -1304,7 +1303,7 @@
                                                             </div>
 
                                                             <div>
-                                                                <H3 class="text-black">INFORMAÇÕES</H3>
+                                                                <H3 class="text-black font-bold">INFORMAÇÕES</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -1377,7 +1376,6 @@
                                     </div>
                                 </div>
                             @endforeach
-
                         </div>
                     </div>
 
@@ -1497,7 +1495,7 @@
 
                                                         <div class="flex lg:flex-row flex-col gap-4 justify-center">
                                                             <div>
-                                                                <H3 class="text-black">DADOS TÉCNICOS</H3>
+                                                                <H3 class="text-black font-bold">DADOS TÉCNICOS</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -1565,7 +1563,7 @@
                                                             </div>
 
                                                             <div>
-                                                                <H3 class="text-black">INFORMAÇÕES</H3>
+                                                                <H3 class="text-black font-bold">INFORMAÇÕES</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -1638,8 +1636,6 @@
                                     </div>
                                 </div>
                             @endforeach
-
-
                         </div>
                     </div>
                 </div>
@@ -1793,7 +1789,7 @@
 
                                                     <div class="flex gap-4 justify-center">
                                                         <div>
-                                                            <H3 class="text-black">DADOS TÉCNICOS</H3>
+                                                            <H3 class="text-black font-bold">DADOS TÉCNICOS</H3>
                                                             <table
                                                                 class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -1838,7 +1834,7 @@
                                                         </div>
 
                                                         <div>
-                                                            <H3 class="text-black">INFORMAÇÕES</H3>
+                                                            <H3 class="text-black font-bold">INFORMAÇÕES</H3>
                                                             <table
                                                                 class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -2013,7 +2009,7 @@
 
                                                         <div class="flex lg:flex-row flex-col gap-4 justify-center">
                                                             <div>
-                                                                <H3 class="text-black">DADOS TÉCNICOS</H3>
+                                                                <H3 class="text-black font-bold">DADOS TÉCNICOS</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -2082,7 +2078,7 @@
                                                             </div>
 
                                                             <div>
-                                                                <H3 class="text-black">INFORMAÇÕES</H3>
+                                                                <H3 class="text-black font-bold">INFORMAÇÕES</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -2157,8 +2153,6 @@
                                     </div>
                                 </div>
                             @endforeach
-
-
                         </div>
                     </div>
 
@@ -2279,7 +2273,7 @@
 
                                                         <div class="flex lg:flex-row flex-col gap-4 justify-center">
                                                             <div>
-                                                                <H3 class="text-black">DADOS TÉCNICOS</H3>
+                                                                <H3 class="text-black font-bold">DADOS TÉCNICOS</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -2348,7 +2342,7 @@
                                                             </div>
 
                                                             <div>
-                                                                <H3 class="text-black">INFORMAÇÕES</H3>
+                                                                <H3 class="text-black font-bold">INFORMAÇÕES</H3>
                                                                 <table
                                                                     class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -2423,17 +2417,11 @@
                                     </div>
                                 </div>
                             @endforeach
-
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
 
     </main>
 @endsection
