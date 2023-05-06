@@ -17,8 +17,7 @@
                         clip-rule="evenodd"></path>
                 </svg>
                 <div class="ml-3 text-sm font-medium uppercase">
-                    Antes de tudo, veja alguns requisitos para obter o Financiamento <a href="{{ route('infor') }}"
-                        target="_blank">
+                    Antes de tudo, veja alguns requisitos para obter o Financiamento <a href="{{ route('infor') }}">
                         <button type="button" class="font-semibold underline hover:no-underline uppercase">
                             clicando aqui </button>
                     </a>

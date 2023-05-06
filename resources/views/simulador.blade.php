@@ -1,44 +1,49 @@
 @extends('template')
 @section('content')
-    <main class="w-[100%] h-[100vh] flex">
-        <div class="bg-zinc-800 flex items-center justify-center border border-white flex-col lg:w-[50%] m-auto">
+    <main class="w-[100%] h-[100vh] flex flex-col">
+        <h1 class="text-white text-center mt-4 text-2xl">ARMA LEGAL</h1>
+        <div class="bg-zinc-800 flex items-center justify-center border border-white flex-col lg:w-[70%] m-auto">
             <div id="title" class="w-[100%] h-[5em] flex justify-center items-center text-gray-300 flex-col bg-zinc-950">
                 <h1 class="text-bold text-2xl">SIMULADOR DE PREÇOS</h1>
-                <small class="text-sm">(OBS: Aqui é apenas uma simulação, os valores podem variar)</small>
+                <small class="text-sm">(OBS: Os valores podem variar)</small>
             </div>
 
-            <div class="w-[100%] h-[25em] p-4 bg-zinc-400 flex flex-col justify-around items-center">
-                <div class="h-[10em] justify-between items-center flex lg:flex-row flex-col w-[50%] overflow-hidden gap-4">
+            <div class="w-[100%] p-4 bg-zinc-400 flex flex-col justify-center items-center">
+                <div class=" justify-between items-center flex lg:flex-row flex-col w-[70%] overflow-hidden lg:gap-8">
                     <Label class="font-bold text-xl" for="arma">Modelo da Arma: </Label>
                     <span class=" font-bold"></span>
                 </div>
-                <div class="h-[10em] justify-between items-center flex w-[50%] lg:flex-row flex-col overflow-hidden gap-4">
+                <div
+                    class=" justify-between items-center flex w-[70%] lg:flex-row flex-col overflow-hidden lg:gap-8">
                     <Label class="font-bold text-xl" for="arma">Valor da Arma: </Label>
-                    <input class="outline-none w-[7em] text-1xl p-2 border-none font-bold text-center" type="number"
-                        name="arma" id="arma" value="{{$armas->preco}}">
+                    <input class="outline-none w-[7em] bg-transparent text-xl p-2 border-none font-bold text-center"
+                        disabled type="number" name="arma" id="arma" value="{{ $armas->preco }}">
                 </div>
 
-                <span class="text-orange-600 font-bold text-left" id="span-infor">(Máximo 24 vezes)</span>
-
-                <div class="h-[10em] justify-between items-center flex w-[50%] lg:flex-row flex-col overflow-hidden gap-4">
+                <div
+                    class="justify-between items-center flex w-[70%] lg:flex-row flex-col overflow-hidden lg:gap-8">
 
                     <Label class="font-bold text-xl" for="tooltip" data-toggle="tooltip" data-placement="top"
                         title="
         / 1 - 20% / 2 a 5 - 30% / 6 a 8 - 40% / 9 a 12 - 50% / 12 em diante - 70% / ">Número
                         de Parcelas: </Label>
-                    <input class="outline-none w-[7em] text-1xl p-2 border-none font-bold text-center" type="number"
-                        name="quantidade" id="quantidade" value="">
+                    <input class="outline-none w-[7em] rounded-lg text-1xl p-2 border-none font-bold text-center" type="number"
+                        name="quantidade" id="quantidade" value="" maxlength="24">
                 </div>
 
-                <div class="h-[10em] justify-between items-center flex w-[50%] lg:flex-row flex-col overflow-hidden gap-4">
+                <span class="text-orange-600 font-bold text-left" id="span-infor">(Máximo 24 vezes)</span>
+
+                <div
+                    class=" justify-between items-center flex w-[70%] lg:flex-row flex-col overflow-hidden lg:gap-8">
                     <Label class="font-bold text-xl" for="lucro">Porcentagem de lucro: </Label>
                     <span id="lucro" class="font-bold text-2xl"></span>
                 </div>
-                <div class="h-[10em] justify-between items-center flex w-[50%] lg:flex-row flex-col overflow-hidden gap-4">
+                <div class=" justify-between items-center flex w-[70%] lg:flex-row flex-col overflow-hidden lg:gap-8">
                     <Label class="font-bold text-xl" for="mes">Valor a pagar por mês: </Label>
                     <span id="mes" class="font-bold text-2xl"></span>
                 </div>
-                <div class="h-[10em] justify-between mb-4 items-center flex w-[50%] lg:flex-row flex-col overflow-hidden gap-4">
+                <div
+                    class=" justify-between mb-4 items-center flex w-[70%] lg:flex-row flex-col overflow-hidden lg:gap-8">
                     <Label class="font-bold text-xl" for="total" id="totalpago">Total a ser pago: </Label>
                     <span id="total" class="font-bold text-2xl"></span>
                 </div>
@@ -55,15 +60,11 @@
     <script>
         function simulador() {
 
-            var arma = document.getElementById("arma");
-            var armaValor
-            arma.addEventListener("change", function() {
-                armaValor = document.getElementById("arma").value
-                console.log("arma valor: " + armaValor);
-            });
+            var arma = document.getElementById("arma").value;
+            console.log('valor da arma: ' + arma)
 
             var quantidade = document.getElementById("quantidade");
-            console.log("Quantidade " + quantidade)
+
             quantidade.addEventListener("change", function() {
                 var quantidadeValor = document.getElementById("quantidade").value
                 console.log("Quantidade valor: " + quantidadeValor);
@@ -95,9 +96,9 @@
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
 
-                var totalAPagar = ((parseInt(armaValor) / 100 * lucroPercentual)) + parseInt(armaValor);
+                var totalAPagar = ((parseInt(arma) / 100 * lucroPercentual)) + parseInt(arma);
                 document.querySelector("span[id=total]").innerHTML = `${totalAPagar.toFixed(2).replace(".", ",")}`;
-                console.log("Total " + totalAPagar)
+                console.log("Total a pagar" + totalAPagar)
 
                 var mes = totalAPagar / quantidadeValor;
                 document.querySelector("span[id=mes]").innerHTML = `${mes.toFixed(2).replace(".", ",")}`;
@@ -158,74 +159,5 @@
         #simulacao:hover {
             background-color: rgb(34, 34, 34);
         }
-
-
     </style>
-
-    <script>
-        function simulador() {
-
-            var arma = document.getElementById("arma");
-            var armaValor
-            arma.addEventListener("change", function() {
-                armaValor = document.getElementById("arma").value
-                console.log("arma valor: " + armaValor);
-            });
-
-            var quantidade = document.getElementById("quantidade");
-            console.log("Quantidade " + quantidade)
-            quantidade.addEventListener("change", function() {
-                var quantidadeValor = document.getElementById("quantidade").value
-                console.log("Quantidade valor: " + quantidadeValor);
-
-                var lucro = document.getElementById("lucro");
-                if (quantidadeValor <= 1) {
-                    var lucroPercentual = 20;
-                    document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
-                    console.log(` lucro percentual: ${lucroPercentual}`);
-                }
-                if (quantidadeValor > 1 && quantidadeValor <= 5) {
-                    var lucroPercentual = 30;
-                    document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
-                    console.log(` lucro percentual: ${lucroPercentual}`);
-                }
-                if (quantidadeValor > 5 && quantidadeValor <= 8) {
-                    var lucroPercentual = 40;
-                    document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
-                    console.log(` lucro percentual: ${lucroPercentual}`);
-                }
-                if (quantidadeValor > 8 && quantidadeValor <= 12) {
-                    var lucroPercentual = 50;
-                    document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
-                    console.log(` lucro percentual: ${lucroPercentual}`);
-                }
-                if (quantidadeValor > 12) {
-                    var lucroPercentual = 70;
-                    document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
-                    console.log(` lucro percentual: ${lucroPercentual}`);
-                }
-
-                var totalAPagar = ((parseInt(armaValor) / 100 * lucroPercentual)) + parseInt(armaValor);
-                document.querySelector("span[id=total]").innerHTML = `${totalAPagar.toFixed(2).replace(".", ",")}`;
-                console.log("Total " + totalAPagar)
-
-                var mes = totalAPagar / quantidadeValor;
-                document.querySelector("span[id=mes]").innerHTML = `${mes.toFixed(2).replace(".", ",")}`;
-                console.log("valor por mes " + mes);
-            });
-
-        }
-
-        function atualizar() {
-            var btn = document.querySelector("#simulacao");
-
-            btn.addEventListener("click", function() {
-                location.reload();
-
-            });
-        }
-
-        simulador();
-        atualizar();
-    </script>
 @endsection
