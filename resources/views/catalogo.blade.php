@@ -5,8 +5,6 @@
             <img src="/Imgs/soldado.jpg" class="h-[100vh]" alt="">
         </div>
 
-
-
         <div class="lg:w-[80%] lg:h-[100vh] justify-start lg:overflow-auto bg-zinc-950">
 
             <div id="alert-border-4"
@@ -64,7 +62,7 @@
                         <h2 class="text-center m-4 text-2xl text-white">Pistolas</h2>
 
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
-                            @foreach ($pistolaTaurus as $t)
+                            @foreach ($pistolaTaurus as $pistolaT)
                                 <!-- Card da arma -->
                                 <div
                                     class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
@@ -76,9 +74,9 @@
                                     </div>
                                     <!-- Corpo do card -->
                                     <div class="text-center flex flex-col text-white gap-2">
-                                        <p>PT {{ $t->nome }}</p>
-                                        <span>Calibre: {{ $t->calibre }}</span>
-                                        <span>Capacidade de tiro {{ $t->capacidade_tiro }}</span>
+                                        <p>PT {{ $pistolaT->nome }}</p>
+                                        <span>Calibre: {{ $pistolaT->calibre }}</span>
+                                        <span>Capacidade de tiro {{ $pistolaT->capacidade_tiro }}</span>
 
                                         <!-- Modal toggle -->
                                         <button data-modal-target="defaultModal" data-modal-toggle="defaultModal"
@@ -196,7 +194,7 @@
                                                                             CALIBRE
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $t->calibre }}
+                                                                            {{ $pistolaT->calibre }}
                                                                         </td>
                                                                     </tr>
 
@@ -204,7 +202,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             ACABAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $t->acabamento }}
+                                                                            {{ $pistolaT->acabamento }}
                                                                         </td>
                                                                     </tr>
 
@@ -212,7 +210,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             CAPACIDADE DE TIRO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $t->capacidade_tiro }}
+                                                                            {{ $pistolaT->capacidade_tiro }}
                                                                         </td>
                                                                     </tr>
 
@@ -220,23 +218,23 @@
                                                                         <td scope="row" class="px-6 py-4 border">SIST.
                                                                             DE FUNCIONAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $t->sistema_funcionamento }}
+                                                                            {{ $pistolaT->sistema_funcionamento }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             RAIAS/SENTIDO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $t->qtd_raias }} /
-                                                                            {{ $t->sentido_raias }}
+                                                                            {{ $pistolaT->qtd_raias }} /
+                                                                            {{ $pistolaT->sentido_raias }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">QTD
                                                                             CANO / COMPRIMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $t->qtd_cano }} /
-                                                                            {{ $t->comprimento_cano }}
+                                                                            {{ $pistolaT->qtd_cano }} /
+                                                                            {{ $pistolaT->comprimento_cano }}
                                                                         </td>
                                                                     </tr>
 
@@ -264,7 +262,7 @@
                                                                             DE FABRICAÇÃO
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $t->pais_fabricacao }}
+                                                                            {{ $pistolaT->pais_fabricacao }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
@@ -272,7 +270,7 @@
                                                                             ESPÉCIE
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $t->tipo }}
+                                                                            {{ $pistolaT->tipo }}
                                                                         </td>
                                                                     </tr>
 
@@ -280,7 +278,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">MARCA
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $t->fabricante }}
+                                                                            {{ $pistolaT->fabricante }}
                                                                         </td>
                                                                     </tr>
 
@@ -288,7 +286,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">PREÇO
                                                                             À VISTA</th>
                                                                         <td scope="row" class="px-6 py-4 border"> R$
-                                                                            {{ $t->preco }},00
+                                                                            {{ $pistolaT->preco }},00
                                                                         </td>
                                                                     </tr>
 
@@ -306,7 +304,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $arma->id]) }}"
+                                                            href="{{ route('simulador', ['id' => $pistolaT->id]) }}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>
@@ -321,13 +319,11 @@
 
                     </div>
 
-
-
                     <!-- Revólveres ---->
                     <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Revólveres</h2>
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
-                            @foreach ($revolverTaurus as $r)
+                            @foreach ($revolverTaurus as $revolverT)
                                 <!-- Card da arma -->
                                 <div
                                     class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
@@ -339,9 +335,9 @@
                                     </div>
                                     <!-- Corpo do card -->
                                     <div class="text-center flex flex-col text-white gap-2">
-                                        <p>PT {{ $r->nome }}</p>
-                                        <span>Calibre: {{ $r->calibre }}</span>
-                                        <span>Capacidade de tiro {{ $r->capacidade_tiro }}</span>
+                                        <p>PT {{ $revolverT->nome }}</p>
+                                        <span>Calibre: {{ $revolverT->calibre }}</span>
+                                        <span>Capacidade de tiro {{ $revolverT->capacidade_tiro }}</span>
 
                                         <!-- Modal toggle -->
                                         <button data-modal-target="defaultModal" data-modal-toggle="defaultModal"
@@ -459,7 +455,7 @@
                                                                             CALIBRE
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $r->calibre }}
+                                                                            {{ $revolverT->calibre }}
                                                                         </td>
                                                                     </tr>
 
@@ -467,7 +463,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             ACABAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $r->acabamento }}
+                                                                            {{ $revolverT->acabamento }}
                                                                         </td>
                                                                     </tr>
 
@@ -475,7 +471,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             CAPACIDADE DE TIRO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $r->capacidade_tiro }}
+                                                                            {{ $revolverT->capacidade_tiro }}
                                                                         </td>
                                                                     </tr>
 
@@ -483,23 +479,23 @@
                                                                         <td scope="row" class="px-6 py-4 border">SIST.
                                                                             DE FUNCIONAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $r->sistema_funcionamento }}
+                                                                            {{ $revolverT->sistema_funcionamento }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             RAIAS/SENTIDO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $r->qtd_raias }} /
-                                                                            {{ $r->sentido_raias }}
+                                                                            {{ $revolverT->qtd_raias }} /
+                                                                            {{ $revolverT->sentido_raias }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">QTD
                                                                             CANO / COMPRIMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $r->qtd_cano }} /
-                                                                            {{ $r->comprimento_cano }}
+                                                                            {{ $revolverT->qtd_cano }} /
+                                                                            {{ $revolverT->comprimento_cano }}
                                                                         </td>
                                                                     </tr>
 
@@ -569,7 +565,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $t->id]) }}"
+                                                            href="{{ route('simulador', ['id' => $pistolaT->id]) }}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>
@@ -587,7 +583,7 @@
                     <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Armas Longas</h2>
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
-                            @foreach ($armas as $arma)
+                            @foreach ($longasTaurus as $longasT)
                                 <!-- Card da arma -->
                                 <div
                                     class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
@@ -599,9 +595,9 @@
                                     </div>
                                     <!-- Corpo do card -->
                                     <div class="text-center flex flex-col text-white gap-2">
-                                        <p>PT {{ $arma->nome }}</p>
-                                        <span>Calibre: {{ $arma->calibre }}</span>
-                                        <span>Capacidade de tiro {{ $arma->capacidade_tiro }}</span>
+                                        <p>PT {{ $longasT->nome }}</p>
+                                        <span>Calibre: {{ $longasT->calibre }}</span>
+                                        <span>Capacidade de tiro {{ $longasT->capacidade_tiro }}</span>
 
                                         <!-- Modal toggle -->
                                         <button data-modal-target="defaultModal" data-modal-toggle="defaultModal"
@@ -719,7 +715,7 @@
                                                                             CALIBRE
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->calibre }}
+                                                                            {{ $longasT->calibre }}
                                                                         </td>
                                                                     </tr>
 
@@ -727,7 +723,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             ACABAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->acabamento }}
+                                                                            {{ $longasT->acabamento }}
                                                                         </td>
                                                                     </tr>
 
@@ -735,7 +731,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             CAPACIDADE DE TIRO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->capacidade_tiro }}
+                                                                            {{ $longasT->capacidade_tiro }}
                                                                         </td>
                                                                     </tr>
 
@@ -743,23 +739,23 @@
                                                                         <td scope="row" class="px-6 py-4 border">SIST.
                                                                             DE FUNCIONAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->sistema_funcionamento }}
+                                                                            {{ $longasT->sistema_funcionamento }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             RAIAS/SENTIDO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->qtd_raias }} /
-                                                                            {{ $arma->sentido_raias }}
+                                                                            {{ $longasT->qtd_raias }} /
+                                                                            {{ $longasT->sentido_raias }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">QTD
                                                                             CANO / COMPRIMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->qtd_cano }} /
-                                                                            {{ $arma->comprimento_cano }}
+                                                                            {{ $longasT->qtd_cano }} /
+                                                                            {{ $longasT->comprimento_cano }}
                                                                         </td>
                                                                     </tr>
 
@@ -868,7 +864,7 @@
                     <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Pistolas</h2>
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
-                            @foreach ($armas as $arma)
+                            @foreach ($pistolaCBC as $pistolaC)
                                 <!-- Card da arma -->
                                 <div
                                     class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
@@ -880,9 +876,9 @@
                                     </div>
                                     <!-- Corpo do card -->
                                     <div class="text-center flex flex-col text-white gap-2">
-                                        <p>PT {{ $arma->nome }}</p>
-                                        <span>Calibre: {{ $arma->calibre }}</span>
-                                        <span>Capacidade de tiro {{ $arma->capacidade_tiro }}</span>
+                                        <p>PT {{ $pistolaC->nome }}</p>
+                                        <span>Calibre: {{ $pistolaC->calibre }}</span>
+                                        <span>Capacidade de tiro {{ $pistolaC->capacidade_tiro }}</span>
 
                                         <!-- Modal toggle -->
                                         <button data-modal-target="defaultModal" data-modal-toggle="defaultModal"
@@ -1000,7 +996,7 @@
                                                                             CALIBRE
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->calibre }}
+                                                                            {{ $pistolaC->calibre }}
                                                                         </td>
                                                                     </tr>
 
@@ -1008,7 +1004,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             ACABAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->acabamento }}
+                                                                            {{ $pistolaC->acabamento }}
                                                                         </td>
                                                                     </tr>
 
@@ -1016,7 +1012,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             CAPACIDADE DE TIRO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->capacidade_tiro }}
+                                                                            {{ $pistolaC->capacidade_tiro }}
                                                                         </td>
                                                                     </tr>
 
@@ -1024,23 +1020,23 @@
                                                                         <td scope="row" class="px-6 py-4 border">SIST.
                                                                             DE FUNCIONAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->sistema_funcionamento }}
+                                                                            {{ $pistolaC->sistema_funcionamento }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             RAIAS/SENTIDO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->qtd_raias }} /
-                                                                            {{ $arma->sentido_raias }}
+                                                                            {{ $pistolaC->qtd_raias }} /
+                                                                            {{ $pistolaC->sentido_raias }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">QTD
                                                                             CANO / COMPRIMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->qtd_cano }} /
-                                                                            {{ $arma->comprimento_cano }}
+                                                                            {{ $pistolaC->qtd_cano }} /
+                                                                            {{ $pistolaC->comprimento_cano }}
                                                                         </td>
                                                                     </tr>
 
@@ -1068,7 +1064,7 @@
                                                                             DE FABRICAÇÃO
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->pais_fabricacao }}
+                                                                            {{ $pistolaC->pais_fabricacao }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
@@ -1076,7 +1072,7 @@
                                                                             ESPÉCIE
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->tipo }}
+                                                                            {{ $pistolaC->tipo }}
                                                                         </td>
                                                                     </tr>
 
@@ -1084,7 +1080,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">MARCA
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->fabricante }}
+                                                                            {{ $pistolaC->fabricante }}
                                                                         </td>
                                                                     </tr>
 
@@ -1092,7 +1088,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">PREÇO
                                                                             À VISTA</th>
                                                                         <td scope="row" class="px-6 py-4 border"> R$
-                                                                            {{ $arma->preco }},00
+                                                                            {{ $pistolaC->preco }},00
                                                                         </td>
                                                                     </tr>
 
@@ -1110,7 +1106,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $arma->id]) }}"
+                                                            href="{{ route('simulador', ['id' => $pistolaC->id]) }}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>
@@ -1129,7 +1125,7 @@
                     <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Revólveres</h2>
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
-                            @foreach ($armas as $arma)
+                            @foreach ($revolverCBC as $revolverC)
                                 <!-- Card da arma -->
                                 <div
                                     class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
@@ -1141,9 +1137,9 @@
                                     </div>
                                     <!-- Corpo do card -->
                                     <div class="text-center flex flex-col text-white gap-2">
-                                        <p>PT {{ $arma->nome }}</p>
-                                        <span>Calibre: {{ $arma->calibre }}</span>
-                                        <span>Capacidade de tiro {{ $arma->capacidade_tiro }}</span>
+                                        <p>PT {{ $revolverC->nome }}</p>
+                                        <span>Calibre: {{ $revolverC->calibre }}</span>
+                                        <span>Capacidade de tiro {{ $revolverC->capacidade_tiro }}</span>
 
                                         <!-- Modal toggle -->
                                         <button data-modal-target="defaultModal" data-modal-toggle="defaultModal"
@@ -1261,7 +1257,7 @@
                                                                             CALIBRE
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->calibre }}
+                                                                            {{ $revolverC->calibre }}
                                                                         </td>
                                                                     </tr>
 
@@ -1269,7 +1265,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             ACABAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->acabamento }}
+                                                                            {{ $revolverC->acabamento }}
                                                                         </td>
                                                                     </tr>
 
@@ -1277,7 +1273,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             CAPACIDADE DE TIRO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->capacidade_tiro }}
+                                                                            {{ $revolverC->capacidade_tiro }}
                                                                         </td>
                                                                     </tr>
 
@@ -1285,23 +1281,23 @@
                                                                         <td scope="row" class="px-6 py-4 border">SIST.
                                                                             DE FUNCIONAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->sistema_funcionamento }}
+                                                                            {{ $revolverC->sistema_funcionamento }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             RAIAS/SENTIDO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->qtd_raias }} /
-                                                                            {{ $arma->sentido_raias }}
+                                                                            {{ $revolverC->qtd_raias }} /
+                                                                            {{ $revolverC->sentido_raias }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">QTD
                                                                             CANO / COMPRIMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->qtd_cano }} /
-                                                                            {{ $arma->comprimento_cano }}
+                                                                            {{ $revolverC->qtd_cano }} /
+                                                                            {{ $revolverC->comprimento_cano }}
                                                                         </td>
                                                                     </tr>
 
@@ -1329,7 +1325,7 @@
                                                                             DE FABRICAÇÃO
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->pais_fabricacao }}
+                                                                            {{ $revolverC->pais_fabricacao }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
@@ -1337,7 +1333,7 @@
                                                                             ESPÉCIE
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->tipo }}
+                                                                            {{ $revolverC->tipo }}
                                                                         </td>
                                                                     </tr>
 
@@ -1345,7 +1341,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">MARCA
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->fabricante }}
+                                                                            {{ $revolverC->fabricante }}
                                                                         </td>
                                                                     </tr>
 
@@ -1353,7 +1349,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">PREÇO
                                                                             À VISTA</th>
                                                                         <td scope="row" class="px-6 py-4 border"> R$
-                                                                            {{ $arma->preco }},00
+                                                                            {{ $revolverC->preco }},00
                                                                         </td>
                                                                     </tr>
 
@@ -1371,7 +1367,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $arma->id]) }}"
+                                                            href="{{ route('simulador', ['id' => $revolverC->id]) }}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>
@@ -1390,7 +1386,7 @@
                     <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Armas Longas</h2>
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
-                            @foreach ($armas as $arma)
+                            @foreach ($longasCBC as $longasC)
                                 <!-- Card da arma -->
                                 <div
                                     class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
@@ -1402,9 +1398,9 @@
                                     </div>
                                     <!-- Corpo do card -->
                                     <div class="text-center flex flex-col text-white gap-2">
-                                        <p>PT {{ $arma->nome }}</p>
-                                        <span>Calibre: {{ $arma->calibre }}</span>
-                                        <span>Capacidade de tiro {{ $arma->capacidade_tiro }}</span>
+                                        <p>PT {{ $longasC->nome }}</p>
+                                        <span>Calibre: {{ $longasC->calibre }}</span>
+                                        <span>Capacidade de tiro {{ $longasC->capacidade_tiro }}</span>
 
                                         <!-- Modal toggle -->
                                         <button data-modal-target="defaultModal" data-modal-toggle="defaultModal"
@@ -1522,7 +1518,7 @@
                                                                             CALIBRE
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->calibre }}
+                                                                            {{ $longasC->calibre }}
                                                                         </td>
                                                                     </tr>
 
@@ -1530,7 +1526,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             ACABAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->acabamento }}
+                                                                            {{ $longasC->acabamento }}
                                                                         </td>
                                                                     </tr>
 
@@ -1538,7 +1534,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             CAPACIDADE DE TIRO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->capacidade_tiro }}
+                                                                            {{ $longasC->capacidade_tiro }}
                                                                         </td>
                                                                     </tr>
 
@@ -1546,23 +1542,23 @@
                                                                         <td scope="row" class="px-6 py-4 border">SIST.
                                                                             DE FUNCIONAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->sistema_funcionamento }}
+                                                                            {{ $longasC->sistema_funcionamento }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             RAIAS/SENTIDO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->qtd_raias }} /
-                                                                            {{ $arma->sentido_raias }}
+                                                                            {{ $longasC->qtd_raias }} /
+                                                                            {{ $longasC->sentido_raias }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">QTD
                                                                             CANO / COMPRIMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->qtd_cano }} /
-                                                                            {{ $arma->comprimento_cano }}
+                                                                            {{ $longasC->qtd_cano }} /
+                                                                            {{ $longasC->comprimento_cano }}
                                                                         </td>
                                                                     </tr>
 
@@ -1590,7 +1586,7 @@
                                                                             DE FABRICAÇÃO
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->pais_fabricacao }}
+                                                                            {{ $longasC->pais_fabricacao }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
@@ -1598,7 +1594,7 @@
                                                                             ESPÉCIE
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->tipo }}
+                                                                            {{ $longasC->tipo }}
                                                                         </td>
                                                                     </tr>
 
@@ -1606,7 +1602,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">MARCA
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->fabricante }}
+                                                                            {{ $longasC->fabricante }}
                                                                         </td>
                                                                     </tr>
 
@@ -1614,7 +1610,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">PREÇO
                                                                             À VISTA</th>
                                                                         <td scope="row" class="px-6 py-4 border"> R$
-                                                                            {{ $arma->preco }},00
+                                                                            {{ $longasC->preco }},00
                                                                         </td>
                                                                     </tr>
 
@@ -1632,7 +1628,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $arma->id]) }}"
+                                                            href="{{ route('simulador', ['id' => $longasC->id]) }}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>
@@ -1673,6 +1669,8 @@
                     <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Pistolas</h2>
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
+                            @foreach ($pistolaGlock as $pistolaG)
+                            <!-- card arma -->
                             <div
                                 class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
                                 <div class="mb-4 w-[15em]">
@@ -1895,7 +1893,7 @@
 
                                 </div>
                             </div>
-
+                            @endforeach
                         </div>
                     </div>
 
@@ -1903,7 +1901,7 @@
                     <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Revólveres</h2>
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
-                            @foreach ($armas as $arma)
+                            @foreach ( $revolverGlock as  $revolverG)
                                 <!-- Card da arma -->
                                 <div
                                     class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
@@ -1915,9 +1913,9 @@
                                     </div>
                                     <!-- Corpo do card -->
                                     <div class="text-center flex flex-col text-white gap-2">
-                                        <p>PT {{ $arma->nome }}</p>
-                                        <span>Calibre: {{ $arma->calibre }}</span>
-                                        <span>Capacidade de tiro {{ $arma->capacidade_tiro }}</span>
+                                        <p>PT {{ $revolverG->nome }}</p>
+                                        <span>Calibre: {{ $revolverG->calibre }}</span>
+                                        <span>Capacidade de tiro {{ $revolverG->capacidade_tiro }}</span>
 
                                         <!-- Modal toggle -->
                                         <button data-modal-target="defaultModal" data-modal-toggle="defaultModal"
@@ -2036,7 +2034,7 @@
                                                                             CALIBRE
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->calibre }}
+                                                                            {{ $revolverG->calibre }}
                                                                         </td>
                                                                     </tr>
 
@@ -2044,7 +2042,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             ACABAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->acabamento }}
+                                                                            {{ $revolverG->acabamento }}
                                                                         </td>
                                                                     </tr>
 
@@ -2052,7 +2050,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             CAPACIDADE DE TIRO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->capacidade_tiro }}
+                                                                            {{ $revolverG->capacidade_tiro }}
                                                                         </td>
                                                                     </tr>
 
@@ -2061,23 +2059,23 @@
                                                                             SIST.
                                                                             DE FUNCIONAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->sistema_funcionamento }}
+                                                                            {{ $revolverG->sistema_funcionamento }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             RAIAS/SENTIDO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->qtd_raias }} /
-                                                                            {{ $arma->sentido_raias }}
+                                                                            {{ $revolverG->qtd_raias }} /
+                                                                            {{ $revolverG->sentido_raias }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">QTD
                                                                             CANO / COMPRIMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->qtd_cano }} /
-                                                                            {{ $arma->comprimento_cano }}
+                                                                            {{ $revolverG->qtd_cano }} /
+                                                                            {{ $revolverG->comprimento_cano }}
                                                                         </td>
                                                                     </tr>
 
@@ -2105,7 +2103,7 @@
                                                                             DE FABRICAÇÃO
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->pais_fabricacao }}
+                                                                            {{ $revolverG->pais_fabricacao }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
@@ -2113,7 +2111,7 @@
                                                                             ESPÉCIE
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->tipo }}
+                                                                            {{ $revolverG->tipo }}
                                                                         </td>
                                                                     </tr>
 
@@ -2122,7 +2120,7 @@
                                                                             MARCA
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->fabricante }}
+                                                                            {{ $revolverG->fabricante }}
                                                                         </td>
                                                                     </tr>
 
@@ -2131,7 +2129,7 @@
                                                                             PREÇO
                                                                             À VISTA</th>
                                                                         <td scope="row" class="px-6 py-4 border"> R$
-                                                                            {{ $arma->preco }},00
+                                                                            {{ $revolverG->preco }},00
                                                                         </td>
                                                                     </tr>
 
@@ -2149,7 +2147,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $arma->id]) }}"
+                                                            href="{{ route('simulador', ['id' => $revolverG->id]) }}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>
@@ -2169,7 +2167,7 @@
                     <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Armas Longas</h2>
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
-                            @foreach ($armas as $arma)
+                            @foreach ( $longasGlock as  $longasG)
                                 <!-- Card da arma -->
                                 <div
                                     class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
@@ -2181,9 +2179,9 @@
                                     </div>
                                     <!-- Corpo do card -->
                                     <div class="text-center flex flex-col text-white gap-2">
-                                        <p>PT {{ $arma->nome }}</p>
-                                        <span>Calibre: {{ $arma->calibre }}</span>
-                                        <span>Capacidade de tiro {{ $arma->capacidade_tiro }}</span>
+                                        <p>PT {{ $longasG->nome }}</p>
+                                        <span>Calibre: {{ $longasG->calibre }}</span>
+                                        <span>Capacidade de tiro {{ $longasG->capacidade_tiro }}</span>
 
                                         <!-- Modal toggle -->
                                         <button data-modal-target="defaultModal" data-modal-toggle="defaultModal"
@@ -2302,7 +2300,7 @@
                                                                             CALIBRE
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->calibre }}
+                                                                            {{ $longasG->calibre }}
                                                                         </td>
                                                                     </tr>
 
@@ -2310,7 +2308,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             ACABAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->acabamento }}
+                                                                            {{ $longasG->acabamento }}
                                                                         </td>
                                                                     </tr>
 
@@ -2318,7 +2316,7 @@
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             CAPACIDADE DE TIRO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->capacidade_tiro }}
+                                                                            {{ $longasG->capacidade_tiro }}
                                                                         </td>
                                                                     </tr>
 
@@ -2327,23 +2325,23 @@
                                                                             SIST.
                                                                             DE FUNCIONAMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->sistema_funcionamento }}
+                                                                            {{ $longasG->sistema_funcionamento }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">
                                                                             RAIAS/SENTIDO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->qtd_raias }} /
-                                                                            {{ $arma->sentido_raias }}
+                                                                            {{ $longasG->qtd_raias }} /
+                                                                            {{ $longasG->sentido_raias }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
                                                                         <td scope="row" class="px-6 py-4 border">QTD
                                                                             CANO / COMPRIMENTO</th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->qtd_cano }} /
-                                                                            {{ $arma->comprimento_cano }}
+                                                                            {{ $longasG->qtd_cano }} /
+                                                                            {{ $longasG->comprimento_cano }}
                                                                         </td>
                                                                     </tr>
 
@@ -2371,7 +2369,7 @@
                                                                             DE FABRICAÇÃO
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->pais_fabricacao }}
+                                                                            {{ $longasG->pais_fabricacao }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr class="text-center">
@@ -2379,7 +2377,7 @@
                                                                             ESPÉCIE
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->tipo }}
+                                                                            {{ $longasG->tipo }}
                                                                         </td>
                                                                     </tr>
 
@@ -2388,7 +2386,7 @@
                                                                             MARCA
                                                                             </th>
                                                                         <td scope="row" class="px-6 py-4 border">
-                                                                            {{ $arma->fabricante }}
+                                                                            {{ $longasG->fabricante }}
                                                                         </td>
                                                                     </tr>
 
@@ -2397,7 +2395,7 @@
                                                                             PREÇO
                                                                             À VISTA</th>
                                                                         <td scope="row" class="px-6 py-4 border"> R$
-                                                                            {{ $arma->preco }},00
+                                                                            {{ $longasG->preco }},00
                                                                         </td>
                                                                     </tr>
 
@@ -2415,7 +2413,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $arma->id]) }}"
+                                                            href="{{ route('simulador', ['id' => $longasG->id]) }}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>
