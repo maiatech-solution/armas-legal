@@ -47,8 +47,13 @@
                     <Label class="font-bold text-xl" for="total" id="totalpago">Total a ser pago: </Label>
                     <span id="total" class="font-bold text-2xl"></span>
                 </div>
-                <div class="botao">
-                    <button type="button" id="simulacao">
+                <div class="flex lg:flex-row flex-col justify-around items-center w-[100%]">
+
+                        <button type="button" class="lg:w-[30%] w-[100%] gap-8 font-semibold outline-none hover:no-underline uppercase bg-blue-600 hover:bg-blue-700 border p-4 rounded-md mb-8 border-blue-700 text-white">
+                            <a href="{{ route('catalogo') }}"> Retornar ao Catálogo </a>
+                        </button>
+
+                    <button type="button" id="simulacao" class=" lg:w-[65%] w-[100%] outline-none font-semibold hover:no-underline uppercase bg-zinc-800 hover:bg-zinc-700 border p-4 rounded-md mb-8 border-blue-700 text-white">
                         Formulário para solicitação de aprovação do Financiamento
                     </button>
                 </div>
@@ -145,19 +150,6 @@
             color: rgb(3, 88, 3);
         }
 
-        #simulacao {
-            width: auto;
-            padding: 15px;
-            background-color: rgb(24, 24, 24);
-            outline: none;
-            border: none;
-            color: rgb(255, 255, 255);
-            border-radius: 6px;
-            cursor: pointer;
-        }
 
-        #simulacao:hover {
-            background-color: rgb(34, 34, 34);
-        }
     </style>
 @endsection
