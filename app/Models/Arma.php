@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Arma extends Model
 {
@@ -14,8 +15,10 @@ class Arma extends Model
     protected $fillable = [
         'id',
         'foto',
+        'img1',
+        'img2',
+        'img3',
         'nome',
-        'image_id',
         'fabricante',
         'tipo',
         'calibre',
@@ -32,8 +35,4 @@ class Arma extends Model
         'taxa',
     ];
 
-    public function Image_arma():BelongsTo
-    {
-        return $this->belongsTo(Image_arma::class);
-    }
 }
