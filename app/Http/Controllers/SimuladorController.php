@@ -46,7 +46,11 @@ class SimuladorController extends Controller
      */
     public function show($id)
     {
+        if(session()->has('associado')){
         $arma = Arma::find($id);
         return view('simulador', ['armas'=>$arma]);
+    }else{
+        return redirect()->route('index');
+    }
     }
 }

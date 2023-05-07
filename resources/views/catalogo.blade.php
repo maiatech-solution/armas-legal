@@ -301,7 +301,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $pistolaT->id]) }}"
+                                                            href="{{route('simulador', ['id' => $pistolaT->id])}}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>
@@ -560,7 +560,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $revolverT->id]) }}"
+                                                            href="{{route('simulador', ['id' => $revolverT->id])}}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>
@@ -818,7 +818,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $longasT->id]) }}"
+                                                            href="{{route('simulador', ['id' => $longasT->id])}}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>
@@ -1355,7 +1355,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $revolverC->id]) }}"
+                                                            href="{{route('simulador', ['id' => $revolverC->id])}}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>
@@ -1613,7 +1613,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $longasC->id]) }}"
+                                                            href="{{route('simulador', ['id' => $longasC->id])}}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>
@@ -1896,7 +1896,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $pistolaG->id]) }}"
+                                                            href="{{route('simulador', ['id' => $pistolaG->id])}}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>
@@ -2158,7 +2158,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $revolverG->id]) }}"
+                                                            href="{{route('simulador', ['id' => $revolverG->id])}}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>
@@ -2420,7 +2420,7 @@
                                                         </button>
 
                                                         <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                                                            href="{{ route('simulador', ['id' => $longasG->id]) }}"
+                                                            href="{{route('simulador', ['id' => $longasG->id])}}"
                                                             target="_blank"><button type="button">Simular Financiamento
                                                             </button></a>
                                                     </div>

@@ -8,6 +8,10 @@ class InforController extends Controller
 {
 
     public function infor(){
+        if(session()->has('associado')){
         return view('infor');
+    }else{
+        return redirect()->route('index');
+    }
     }
 }

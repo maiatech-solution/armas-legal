@@ -10,7 +10,7 @@
 
             <div class="w-[100%] p-4 bg-zinc-400 flex flex-col justify-center items-center">
                 <div class=" justify-between items-center flex lg:flex-row flex-col w-[70%] overflow-hidden lg:gap-8">
-                    <Label class="font-bold text-xl" for="arma">Modelo da Arma: </Label>
+                    <Label class="font-bold text-xl" for="arma">Arma Escolhida: {{$armas->tipo}} da {{$armas->fabricante}} - {{$armas->nome}}</Label>
                     <span class=" font-bold"></span>
                 </div>
                 <div
@@ -35,7 +35,7 @@
 
                 <div
                     class=" justify-between items-center flex w-[70%] lg:flex-row flex-col overflow-hidden lg:gap-8">
-                    <Label class="font-bold text-xl" for="lucro">Porcentagem de lucro: </Label>
+                    <Label class="font-bold text-xl" for="lucro">Taxa Aplicada: </Label>
                     <span id="lucro" class="font-bold text-2xl"></span>
                 </div>
                 <div class=" justify-between items-center flex w-[70%] lg:flex-row flex-col overflow-hidden lg:gap-8">
@@ -70,28 +70,28 @@
                 console.log("Quantidade valor: " + quantidadeValor);
 
                 var lucro = document.getElementById("lucro");
-                if (quantidadeValor <= 1) {
-                    var lucroPercentual = 20;
+                if (quantidadeValor >= 1 && quantidadeValor <= 5) {
+                    var lucroPercentual = 0.70;
                     document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
-                if (quantidadeValor > 1 && quantidadeValor <= 5) {
-                    var lucroPercentual = 30;
+                if (quantidadeValor >= 6 && quantidadeValor <= 10) {
+                    var lucroPercentual = 0.75;
                     document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
-                if (quantidadeValor > 5 && quantidadeValor <= 8) {
-                    var lucroPercentual = 40;
+                if (quantidadeValor >= 11 && quantidadeValor <= 15) {
+                    var lucroPercentual = 0.78;
                     document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
-                if (quantidadeValor > 8 && quantidadeValor <= 12) {
-                    var lucroPercentual = 50;
+                if (quantidadeValor >= 16 && quantidadeValor <= 20) {
+                    var lucroPercentual = 0.85;
                     document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
-                if (quantidadeValor > 12) {
-                    var lucroPercentual = 70;
+                if (quantidadeValor >= 21 && quantidadeValor <= 24) {
+                    var lucroPercentual = 1;
                     document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
