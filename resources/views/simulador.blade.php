@@ -52,8 +52,8 @@
                     <div
                         class=" justify-between mb-4 items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
                         <Label class="font-bold text-xl" for="total" id="totalpago">Total a ser pago: </Label>
-                        <!-- <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center" type="text" name="totalArma" id="total" disabled> -->
-                        <span id="total" name="totalArma"></span>
+                        <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center" type="text" name="totalArma" id="total" readonly>
+
                     </div>
                     <div class="flex lg:flex-row flex-col justify-around items-center w-[100%]">
 
@@ -110,7 +110,7 @@
                 }
 
                 var totalAPagar = ((parseInt(arma) / 100 * lucroPercentual)) + parseInt(arma);
-                document.querySelector("span[id=total]").innerHTML = `${totalAPagar.toFixed(2).replace(".", ",")}`;
+                document.querySelector("input[id=total]").value = `${totalAPagar.toFixed(2).replace(".", ",")}`;
                 console.log("Total a pagar" + totalAPagar)
 
                 var mes = totalAPagar / quantidadeValor;
