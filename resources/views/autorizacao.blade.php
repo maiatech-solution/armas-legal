@@ -120,6 +120,10 @@
     </page>
   </body>
 
+  <script>
+     window.print()
+  </script>
+
   <style>
 
   page {
