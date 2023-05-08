@@ -14,7 +14,7 @@
           FUNDO DE ASSISTÊNCIA SOCIAL DA POLÍCIA MILITAR
         </h3>
         <div class="logo-header">
-            <img src="../Imgs/fas.jpg" alt="" class="img-header" />
+            <img src="../Imgs/fas.png" alt="" class="img-header" />
         </div>
       </div>
 

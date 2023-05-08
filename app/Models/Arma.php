@@ -31,8 +31,7 @@ class Arma extends Model
         'qtd_raias',
         'sentido_raias',
         'pais_fabricacao',
-        'preco',
-        'taxa',
+        'preco'
     ];
 
 }
