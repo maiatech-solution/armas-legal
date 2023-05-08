@@ -1,3 +1,4 @@
+@extends('template')
 @section('content')
 <body>
     <page size="A4">

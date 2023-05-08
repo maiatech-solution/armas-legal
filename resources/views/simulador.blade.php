@@ -54,7 +54,7 @@
                         </button>
 
                     <button type="button" id="simulacao" class=" lg:w-[65%] w-[100%] outline-none font-semibold hover:no-underline uppercase bg-zinc-800 hover:bg-zinc-700 border p-4 rounded-md mb-8 border-blue-700 text-white">
-                        Formulário para solicitação de aprovação do Financiamento
+                        <a href="{{ route('autorizacao',['id'=>$armas->id]) }}">Formulário para solicitação de aprovação do Financiamento</a>
                     </button>
                 </div>
             </div>
