@@ -42,12 +42,12 @@
                     <div
                         class=" justify-between items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
                         <Label class="font-bold text-xl" for="lucro">Taxa Aplicada: </Label>
-                        <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center" type="text" name="lucro" id="lucro" disabled>
+                        <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center" type="text" name="lucro" id="lucro" readonly>
 
                     </div>
                     <div class=" justify-between items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
                         <Label class="font-bold text-xl" for="mes">Valor a pagar por mês: </Label>
-                        <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center" type="text" name="parcela" id="mes" disabled>
+                        <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center" type="text" name="parcela" id="mes" readonly>
                     </div>
                     <div
                         class=" justify-between mb-4 items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
