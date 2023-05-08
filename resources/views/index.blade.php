@@ -38,6 +38,8 @@
                         Entrar
                     </button>
                 </div>
+                <small class="text-center">(Acesso somente para quem está associado.)</small>
+                <footer class="bottom-1 right-[1%] absolute">Create By: ML Tech</footer>
             </form>
         </section>
     </main>
