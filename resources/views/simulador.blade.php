@@ -8,11 +8,12 @@
                 <small class="text-sm">(OBS: Os valores podem variar)</small>
             </div>
 
-            <form action="" action="" class="w-[100%] p-4 bg-zinc-400 flex flex-col justify-center items-center">
+            <form action="{{route('autorizacao')}}"class="w-[100%] p-4 bg-zinc-400 flex flex-col justify-center items-center">
 
                     <div class=" justify-between items-center flex lg:flex-row flex-col w-[90%] overflow-hidden lg:gap-8">
                         <Label class="font-bold text-xl w-[30%] " for="arma">Arma Escolhida: </Label>
-                        <input class="outline-none w-[70%] border-none bg-transparent rounded-lg text-xl p-2 font-bold text-center" type="text" value="{{$armas->tipo}} - {{$armas->fabricante}} - {{$armas->nome}}" >
+                        <input class="outline-none w-[70%] border-none bg-transparent rounded-lg text-xl p-2 font-bold text-center"
+                        type="text" value="{{$armas->tipo}} - {{$armas->fabricante}} - {{$armas->nome}} - {{$armas->calibre}}" name="descArma">
                     </div>
                     <div
                         class=" justify-between items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
@@ -30,7 +31,7 @@
                             de Parcelas: </Label>
                             <div class="w-[70%] flex justify-center">
                                 <input class="outline-none rounded-lg w-[10%] text-xl p-2 border-none font-bold text-center"type="number"
-                                    name="quantidade" id="quantidade" >
+                                    name="quantidade" id="quantidade">
                             </div>
                     </div>
 
@@ -46,12 +47,12 @@
                     </div>
                     <div class=" justify-between items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
                         <Label class="font-bold text-xl" for="mes">Valor a pagar por mês: </Label>
-                        <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center" type="text" name="mes" id="mes" disabled>
+                        <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center" type="text" name="parcela" id="mes" disabled>
                     </div>
                     <div
                         class=" justify-between mb-4 items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
                         <Label class="font-bold text-xl" for="total" id="totalpago">Total a ser pago: </Label>
-                        <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center" type="text" name="total" id="total" disabled>
+                        <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center" type="text" name="totalArma" id="total" disabled>
                     </div>
                     <div class="flex lg:flex-row flex-col justify-around items-center w-[100%]">
 
@@ -59,8 +60,8 @@
                                 <a href="{{ route('catalogo') }}"> Retornar ao Catálogo </a>
                             </button>
 
-                        <button type="button" id="simulacao" class=" lg:w-[65%] w-[100%] outline-none font-semibold hover:no-underline uppercase bg-zinc-800 hover:bg-zinc-700 border p-4 rounded-md mb-8 border-zinc-700 text-white">
-                            <a href="{{ route('autorizacao',['id'=>$armas->id]) }}">Formulário para solicitação de aprovação do Financiamento</a>
+                        <button type="submit" id="simulacao" class=" lg:w-[65%] w-[100%] outline-none font-semibold hover:no-underline uppercase bg-zinc-800 hover:bg-zinc-700 border p-4 rounded-md mb-8 border-zinc-700 text-white">
+                            Formulário para solicitação de aprovação do Financiamento
                         </button>
                     </div>
             </form>

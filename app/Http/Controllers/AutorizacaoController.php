@@ -11,9 +11,12 @@ class AutorizacaoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('autorizacao');
+        $dados = $request->only(['descArma', 'quantidade', 'parcela', 'totalArma']);
+        dd($dados);
+
+        return view('autorizacao', ['dados'=> $dados]);
     }
 
     /**

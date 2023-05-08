@@ -15,4 +15,4 @@ Route::get('/login', [AssociadoController::class, 'store'])->name('login');
 Route::get('/infor', [InforController::class, 'infor'])->name('infor');
 Route::get('/catalogo', [CatalogoController::class, 'index'])->name('catalogo');
 Route::get('/simulador/{id}', [SimuladorController::class, 'show'])->name('simulador');
-Route::get('/autorizacao/{id}', [AutorizacaoController::class, 'index'])->name('autorizacao');
+Route::get('/autorizacao', [AutorizacaoController::class, 'index'])->name('autorizacao');
