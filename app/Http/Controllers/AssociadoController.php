@@ -56,6 +56,7 @@ class AssociadoController extends Controller
 
             if ($associado) {
                 session()->put('associado', $request->nome);
+                session()->put('matricula', $request->matricula);
 
                 return redirect()->route('catalogo');
             } else {

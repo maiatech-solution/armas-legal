@@ -47,7 +47,7 @@
           </tr>
           <tr>
             <td colspan="2">NOME: <br>
-                <span>{{session()->get('associado')}}</span>
+                <span class="uppercase">{{session()->get('associado')}}</span>
             </td>
             <td colspan="1">POSTO/GRADUAÇÃO: <br>
 
@@ -57,7 +57,8 @@
             <td colspan="1">RG:
 
             </td>
-            <td colspan="1">MF:
+            <td colspan="1">MF:<br>
+                <span>{{session()->get('matricula')}}</span>
 
             </td>
             <td colspan="1">OPM:
@@ -94,9 +95,9 @@
                 Integrante do Quadro de Associados deste FASPM, vem mui
                 respeitosamente solicitar a V.S.ª., que se digne em AUTORIZAR
                 este Requerente que seja atendido pelo Programa ARMA LEGAL o
-                financiamento para AQUISIÇÃO DE 01 um (a) <span>{{$dados->descArma}}</span> ,
-                , No valor de R$
-                <span>{{$dados->total}}</span>, junto a Empresa AMAZON SERVIÇOS
+                financiamento para AQUISIÇÃO DE 01 um (a)<span>,{{$dados['descArma']}}</span>
+                , no valor de R$
+                <span>{{$dados['totalArma']}}</span>, junto a Empresa AMAZON SERVIÇOS
                 DE ARMARIA E LIMPEZA EIRELI, cujo CNPJ 40.720.043/0001-66,
                 localizada na Tv. Segunda De Queluz, nº 582, sala 04, CANUDOS,
                 BELÉM-PA, por intermédio do Fundo de Assistência Social da
@@ -104,15 +105,14 @@
                 do Processo Licitatório nº 001/2023 – FASPM – CREDENCIAMENTO Nº
                 001/2023 – CPL/FASPM, conforme publicação do D.O nº 35.376, sob
                 consignação REEMBOLSÁVEL cuja as despesas serão RESSARCIDAS ao
-                FASPM em <span>{{$dados->quantidade}}</span> parcelas fixas mensais de R$ <span>{{$dados->mes}}</span>, a serem
+                FASPM em <span>{{$dados['quantidade']}}</span> parcelas fixas mensais de R$ <span>{{$dados['parcela']}}</span>, a serem
                 descontadas no Contra Cheque deste Signatário. <br><br>
                 Nestes Termos
                 <br><br>
                 Pede deferimento!
                 <br><br><br>
                 Assinatura do Requerente/MF: _________________________________________________________<br>
-                {{session()->get('associado')}}
-
+                <span class="uppercase">{{session()->get('associado')}}</span>
               </p>
             </td>
           </tr>

@@ -14,7 +14,6 @@ class AutorizacaoController extends Controller
     public function index(Request $request)
     {
         $dados = $request->only(['descArma', 'quantidade', 'parcela', 'totalArma']);
-        dd($dados);
 
         return view('autorizacao', ['dados'=> $dados]);
     }
