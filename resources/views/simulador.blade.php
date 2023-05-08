@@ -2,62 +2,68 @@
 @section('content')
     <main class="w-[100%] h-[100vh] flex flex-col">
         <h1 class="text-white text-center mt-4 text-2xl">ARMA LEGAL</h1>
-        <div class="bg-zinc-800 flex items-center justify-center border border-white flex-col lg:w-[70%] m-auto">
+        <div class="bg-zinc-800 flex items-center justify-center border border-white flex-col lg:w-[90%] m-auto">
             <div id="title" class="w-[100%] h-[5em] flex justify-center items-center text-gray-300 flex-col bg-zinc-950">
                 <h1 class="text-bold text-2xl">SIMULADOR DE PREÇOS</h1>
                 <small class="text-sm">(OBS: Os valores podem variar)</small>
             </div>
 
-            <div class="w-[100%] p-4 bg-zinc-400 flex flex-col justify-center items-center">
-                <div class=" justify-between items-center flex lg:flex-row flex-col w-[70%] overflow-hidden lg:gap-8">
-                    <Label class="font-bold text-xl" for="arma">Arma Escolhida: {{$armas->tipo}} da {{$armas->fabricante}} - {{$armas->nome}}</Label>
-                    <span class=" font-bold"></span>
-                </div>
-                <div
-                    class=" justify-between items-center flex w-[70%] lg:flex-row flex-col overflow-hidden lg:gap-8">
-                    <Label class="font-bold text-xl" for="arma">Valor da Arma: </Label>
-                    <input class="outline-none w-[7em] bg-transparent text-xl p-2 border-none font-bold text-center"
-                        disabled type="number" name="arma" id="arma" value="{{ $armas->preco }}">
-                </div>
+            <form action="" action="" class="w-[100%] p-4 bg-zinc-400 flex flex-col justify-center items-center">
 
-                <div
-                    class="justify-between items-center flex w-[70%] lg:flex-row flex-col overflow-hidden lg:gap-8">
+                    <div class=" justify-between items-center flex lg:flex-row flex-col w-[90%] overflow-hidden lg:gap-8">
+                        <Label class="font-bold text-xl w-[30%] " for="arma">Arma Escolhida: </Label>
+                        <input class="outline-none w-[70%] border-none bg-transparent rounded-lg text-xl p-2 font-bold text-center" type="text" value="{{$armas->tipo}} - {{$armas->fabricante}} - {{$armas->nome}}" >
+                    </div>
+                    <div
+                        class=" justify-between items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
+                        <Label class="font-bold text-xl w-[30%] " for="arma">Valor da Arma: </Label>
+                        <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center"
+                            disabled type="number" name="arma" id="arma" value="{{ $armas->preco }}">
+                    </div>
 
-                    <Label class="font-bold text-xl" for="tooltip" data-toggle="tooltip" data-placement="top"
-                        title="
-        / 1 - 20% / 2 a 5 - 30% / 6 a 8 - 40% / 9 a 12 - 50% / 12 em diante - 70% / ">Número
-                        de Parcelas: </Label>
-                    <input class="outline-none w-[7em] rounded-lg text-1xl p-2 border-none font-bold text-center" type="number"
-                        name="quantidade" id="quantidade" value="" maxlength="24">
-                </div>
+                    <div
+                        class="justify-between items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
 
-                <span class="text-orange-600 font-bold text-left" id="span-infor">(Máximo 24 vezes)</span>
+                        <Label class="font-bold text-xl w-[30%] " for="tooltip" data-toggle="tooltip" data-placement="top"
+                            title="
+            / 1 - 20% / 2 a 5 - 30% / 6 a 8 - 40% / 9 a 12 - 50% / 12 em diante - 70% / ">Número
+                            de Parcelas: </Label>
+                            <div class="w-[70%] flex justify-center">
+                                <input class="outline-none rounded-lg w-[10%] text-xl p-2 border-none font-bold text-center"type="number"
+                                    name="quantidade" id="quantidade" >
+                            </div>
+                    </div>
 
-                <div
-                    class=" justify-between items-center flex w-[70%] lg:flex-row flex-col overflow-hidden lg:gap-8">
-                    <Label class="font-bold text-xl" for="lucro">Taxa Aplicada: </Label>
-                    <span id="lucro" class="font-bold text-2xl"></span>
-                </div>
-                <div class=" justify-between items-center flex w-[70%] lg:flex-row flex-col overflow-hidden lg:gap-8">
-                    <Label class="font-bold text-xl" for="mes">Valor a pagar por mês: </Label>
-                    <span id="mes" class="font-bold text-2xl"></span>
-                </div>
-                <div
-                    class=" justify-between mb-4 items-center flex w-[70%] lg:flex-row flex-col overflow-hidden lg:gap-8">
-                    <Label class="font-bold text-xl" for="total" id="totalpago">Total a ser pago: </Label>
-                    <span id="total" class="font-bold text-2xl"></span>
-                </div>
-                <div class="flex lg:flex-row flex-col justify-around items-center w-[100%]">
+                    <div class="w-[90%]">
+                        <span class="text-orange-600 font-bold text-left" id="span-infor">(Máximo 24 vezes)</span>
+                    </div>
 
-                        <button type="button" class="lg:w-[30%] w-[100%] gap-8 font-semibold outline-none hover:no-underline uppercase bg-blue-600 hover:bg-blue-700 border p-4 rounded-md mb-8 border-blue-700 text-white">
-                            <a href="{{ route('catalogo') }}"> Retornar ao Catálogo </a>
+                    <div
+                        class=" justify-between items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
+                        <Label class="font-bold text-xl" for="lucro">Taxa Aplicada: </Label>
+                        <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center" type="text" name="lucro" id="lucro" disabled>
+
+                    </div>
+                    <div class=" justify-between items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
+                        <Label class="font-bold text-xl" for="mes">Valor a pagar por mês: </Label>
+                        <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center" type="text" name="mes" id="mes" disabled>
+                    </div>
+                    <div
+                        class=" justify-between mb-4 items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
+                        <Label class="font-bold text-xl" for="total" id="totalpago">Total a ser pago: </Label>
+                        <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center" type="text" name="total" id="total" disabled>
+                    </div>
+                    <div class="flex lg:flex-row flex-col justify-around items-center w-[100%]">
+
+                            <button type="button" class="lg:w-[30%] w-[100%] gap-8 font-semibold outline-none hover:no-underline uppercase bg-blue-600 hover:bg-blue-700 border p-4 rounded-md mb-8 border-blue-700 text-white">
+                                <a href="{{ route('catalogo') }}"> Retornar ao Catálogo </a>
+                            </button>
+
+                        <button type="button" id="simulacao" class=" lg:w-[65%] w-[100%] outline-none font-semibold hover:no-underline uppercase bg-zinc-800 hover:bg-zinc-700 border p-4 rounded-md mb-8 border-zinc-700 text-white">
+                            <a href="{{ route('autorizacao',['id'=>$armas->id]) }}">Formulário para solicitação de aprovação do Financiamento</a>
                         </button>
-
-                    <button type="button" id="simulacao" class=" lg:w-[65%] w-[100%] outline-none font-semibold hover:no-underline uppercase bg-zinc-800 hover:bg-zinc-700 border p-4 rounded-md mb-8 border-blue-700 text-white">
-                        <a href="{{ route('autorizacao',['id'=>$armas->id]) }}">Formulário para solicitação de aprovação do Financiamento</a>
-                    </button>
-                </div>
-            </div>
+                    </div>
+            </form>
         </div>
     </main>
 
@@ -77,36 +83,36 @@
                 var lucro = document.getElementById("lucro");
                 if (quantidadeValor >= 1 && quantidadeValor <= 5) {
                     var lucroPercentual = 0.70;
-                    document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
+                    document.querySelector("input[id=lucro]").value = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
                 if (quantidadeValor >= 6 && quantidadeValor <= 10) {
                     var lucroPercentual = 0.75;
-                    document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
+                    document.querySelector("input[id=lucro]").value = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
                 if (quantidadeValor >= 11 && quantidadeValor <= 15) {
                     var lucroPercentual = 0.78;
-                    document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
+                    document.querySelector("input[id=lucro]").value = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
                 if (quantidadeValor >= 16 && quantidadeValor <= 20) {
                     var lucroPercentual = 0.85;
-                    document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
+                    document.querySelector("input[id=lucro]").value = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
                 if (quantidadeValor >= 21 && quantidadeValor <= 24) {
                     var lucroPercentual = 1;
-                    document.querySelector("span[id=lucro]").innerHTML = `${lucroPercentual} %`;
+                    document.querySelector("input[id=lucro]").value = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
 
                 var totalAPagar = ((parseInt(arma) / 100 * lucroPercentual)) + parseInt(arma);
-                document.querySelector("span[id=total]").innerHTML = `${totalAPagar.toFixed(2).replace(".", ",")}`;
+                document.querySelector("input[id=total]").value = `${totalAPagar.toFixed(2).replace(".", ",")}`;
                 console.log("Total a pagar" + totalAPagar)
 
                 var mes = totalAPagar / quantidadeValor;
-                document.querySelector("span[id=mes]").innerHTML = `${mes.toFixed(2).replace(".", ",")}`;
+                document.querySelector("input[id=mes]").value = `${mes.toFixed(2).replace(".", ",")}`;
                 console.log("valor por mes " + mes);
             });
 

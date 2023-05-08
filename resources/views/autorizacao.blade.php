@@ -4,26 +4,26 @@
     <page size="A4">
       <div class="header">
         <div class="logo-header">
-          <img src="./img/brasao.png" alt="" class="img-header" />
+          <img src="../Imgs/brasao.png" alt="" class="img-header" />
         </div>
 
-        <h3 class="body-header">
+        <h3 class="body-header font-bold">
           GOVERNO DO ESTADO DO PARÁ <br />
           SECRETARIA DE ESTADO DE SEGURANÇA PÚBLICA E DEFESA SOCIAL POLÍCIA
           MILITAR DO PARÁ <br />
           FUNDO DE ASSISTÊNCIA SOCIAL DA POLÍCIA MILITAR
         </h3>
         <div class="logo-header">
-          <img src="./img/fas.jpg" alt="" class="img-header" />
+            <img src="../Imgs/fas.jpg" alt="" class="img-header" />
         </div>
       </div>
 
-      <h2 style="text-align: center;">Programa Arma Legal</h2>
+      <h2 style="text-align: center;" class="mt-4 mb-4 font-bold text-2xl">Programa Arma Legal</h2>
 
       <table class="table">
         <thead class="theader">
           <tr>
-            <th colspan="3">REQUERIMENTO</th>
+            <th colspan="3" class="text-xl">REQUERIMENTO</th>
           </tr>
         </thead>
         <tbody>
@@ -42,7 +42,6 @@
                 DOCUMENTAÇÃO EM ANEXO
                 <li>1- Copia do contracheque do mês atual</li>
                 <li>2- Identidade Militar</li>
-                <li>3- Autorização</li>
               </ul>
             </td>
           </tr>
@@ -122,9 +121,6 @@
   </body>
 
   <style>
-    body {
-    background: rgb(204, 204, 204);
-  }
 
   page {
     background: white;
@@ -163,10 +159,14 @@
 
   .logo-header{
     width: 20%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding: 1em;
   }
 
   .logo-header .img-header{
-    width: 90px;
+    width: 80px;
   }
 
   .header .body-header{
