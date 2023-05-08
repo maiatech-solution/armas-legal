@@ -83,36 +83,35 @@
           </tr>
           <tr>
             <td colspan="1">TEL:
-                <span>...</span>
             </td>
             <td colspan="2">E-MAIL:
-                <span>...</span>
             </td>
           </tr>
           <tr>
             <td colspan="3">
-              <p>
+              <p class="w-[100%]">
                 Integrante do Quadro de Associados deste FASPM, vem mui
                 respeitosamente solicitar a V.S.ª., que se digne em AUTORIZAR
-                este Requerente que seja atendido pelo Programa ARMA LEGAL o
-                financiamento para AQUISIÇÃO DE 01 um (a)<span>,{{$dados['descArma']}}</span>
+                este Requerente que seja atendido pelo Programa <strong>ARMA LEGAL</strong> o
+                financiamento para AQUISIÇÃO DE 01 um (a)<span class="font-bold">,{{$dados['descArma']}}</span>
                 , no valor de R$
-                <span>{{$dados['totalArma']}}</span>, junto a Empresa AMAZON SERVIÇOS
-                DE ARMARIA E LIMPEZA EIRELI, cujo CNPJ 40.720.043/0001-66,
+                <span class="font-bold">{{$dados['totalArma']}}</span>, junto a Empresa <strong>AMAZON SERVIÇOS
+                DE ARMARIA E LIMPEZA EIRELI</strong>, cujo CNPJ <strong>40.720.043/0001-66</strong>,
                 localizada na Tv. Segunda De Queluz, nº 582, sala 04, CANUDOS,
-                BELÉM-PA, por intermédio do Fundo de Assistência Social da
-                Polícia Militar, de acordo com o Contrato nº 011/2023, oriundo
+                BELÉM-PA, por intermédio do <strong>FUNDO DE ASSISTÊNCIA SOCIAL DA POLÍCIA MILITAR</strong>, de acordo com o Contrato nº 011/2023, oriundo
                 do Processo Licitatório nº 001/2023 – FASPM – CREDENCIAMENTO Nº
                 001/2023 – CPL/FASPM, conforme publicação do D.O nº 35.376, sob
                 consignação REEMBOLSÁVEL cuja as despesas serão RESSARCIDAS ao
-                FASPM em <span>{{$dados['quantidade']}}</span> parcelas fixas mensais de R$ <span>{{$dados['parcela']}}</span>, a serem
-                descontadas no Contra Cheque deste Signatário. <br><br>
-                Nestes Termos
+                FASPM em <span class="font-bold">{{$dados['quantidade']}} parcelas</span>  fixas mensais de <span class="font-bold">R$ {{ $dados['parcela']}}</span>, a serem
+                descontadas no <strong>Contra Cheque</strong> deste Signatário. <br><br>
+                Nestes Termos,
                 <br><br>
                 Pede deferimento!
                 <br><br><br>
-                Assinatura do Requerente/MF: _________________________________________________________<br>
-                <span class="uppercase">{{session()->get('associado')}}</span>
+                <span>Assinatura do Requerente/MF:</span>  <br><br><br>
+                <div class="border-t w-[90%] m-auto mb-8 border-black text-center">
+                    <span class="uppercase">{{session()->get('associado')}}</span>
+                </div>
               </p>
             </td>
           </tr>
