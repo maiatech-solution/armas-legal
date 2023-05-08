@@ -12,8 +12,8 @@
           SECRETARIA DE ESTADO DE SEGURANÇA PÚBLICA E DEFESA SOCIAL POLÍCIA
           MILITAR DO PARÁ <br />
           FUNDO DE ASSISTÊNCIA SOCIAL DA POLÍCIA MILITAR
-
         </h3>
+
         <div class="logo-header">
             <img src="../Imgs/fas.png" alt="" class="img-header" />
         </div>
