@@ -1,6 +1,6 @@
 @extends('template')
 @section('content')
-    <main class="flex lg:flex-row flex-col h-[100vh] ">
+    <main class="flex lg:flex-row flex-col h-[100vh] overflow-auto ">
         <div class="lg:w-[20%] lg:overflow-hidden lg:h-[100vh]">
             <img src="/Imgs/soldado.jpg" class="h-[100vh]" alt="">
         </div>
@@ -2465,8 +2465,6 @@
 
         </div>
 
-
-
     </main>
-@include('component.footer')
+    @include('component.footer')
 @endsection

@@ -83,30 +83,28 @@
                 console.log("Quantidade valor: " + quantidadeValor);
 
                 var lucro = document.getElementById("lucro");
-                if (quantidadeValor >= 1 && quantidadeValor <= 5) {
-                    var lucroPercentual = 0.70;
+                if (quantidadeValor >= 1 && quantidadeValor <= 6) {
+                    var lucroPercentual = 0.74;
                     document.querySelector("input[id=lucro]").value = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
-                if (quantidadeValor >= 6 && quantidadeValor <= 10) {
-                    var lucroPercentual = 0.75;
+                if (quantidadeValor >= 7 && quantidadeValor <= 12) {
+                    var lucroPercentual = 0.84;
                     document.querySelector("input[id=lucro]").value = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
-                if (quantidadeValor >= 11 && quantidadeValor <= 15) {
-                    var lucroPercentual = 0.78;
+                if (quantidadeValor >= 13 && quantidadeValor <= 18) {
+                    var lucroPercentual = 0.94;
                     document.querySelector("input[id=lucro]").value = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
-                if (quantidadeValor >= 16 && quantidadeValor <= 20) {
-                    var lucroPercentual = 0.85;
+                if (quantidadeValor >= 19 && quantidadeValor <= 24) {
+                    var lucroPercentual = 1.04;
                     document.querySelector("input[id=lucro]").value = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
-                if (quantidadeValor >= 21 && quantidadeValor <= 24) {
-                    var lucroPercentual = 1;
-                    document.querySelector("input[id=lucro]").value = `${lucroPercentual} %`;
-                    console.log(` lucro percentual: ${lucroPercentual}`);
+                else {
+                    alert("Parcela incorreta - Parcelamos de 1 em até 24x")
                 }
 
                 var totalAPagar = ((parseInt(arma) / 100 * lucroPercentual)) + parseInt(arma);
