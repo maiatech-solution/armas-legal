@@ -83,7 +83,7 @@
                 console.log("Quantidade valor: " + quantidadeValor);
 
                 var lucro = document.getElementById("lucro");
-                if (quantidadeValor >= 1 && quantidadeValor <= 6) {
+                if (quantidadeValor >= 1 && quantidadeValor < 7) {
                     var lucroPercentual = 0.74;
                     document.querySelector("input[id=lucro]").value = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
@@ -103,7 +103,7 @@
                     document.querySelector("input[id=lucro]").value = `${lucroPercentual} %`;
                     console.log(` lucro percentual: ${lucroPercentual}`);
                 }
-                else {
+                if(quantidade > 24) {
                     alert("Parcela incorreta - Parcelamos de 1 em até 24x")
                 }
 
