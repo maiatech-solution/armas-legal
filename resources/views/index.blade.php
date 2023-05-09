@@ -1,7 +1,7 @@
 @extends('template')
 @section('content')
     <main class="flex flex-col lg:flex-row h-[100vh] bg-slate-900 text-white">
-        <section class=" w-[100%] border lg:w-[70vw] mb-4 lg:mb-0 flex lg:border-r-2 lg:border-b-0 border-b-2">
+        <section class=" w-[100%] lg:w-[70vw] mb-4 lg:mb-0 flex lg:border-r-2 lg:border-b-0 border-b-2">
             <img src="./imgs/fuzil.jpg" class="bg-cover bg-transparent" alt="">
         </section>
         <section class="items-center flex flex-col p-4 lg:p-0 lg:w-[30vw] w-[100%] justify-center m-auto">
