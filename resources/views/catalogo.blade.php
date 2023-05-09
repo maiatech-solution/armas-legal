@@ -1,8 +1,8 @@
 @extends('template')
 @section('content')
     <main class="flex lg:flex-row flex-col h-[100vh] overflow-auto ">
-        <div class="lg:w-[20%] lg:overflow-hidden lg:h-[100vh]">
-            <img src="/Imgs/soldado.jpg" class="h-[100vh]" alt="">
+        <div class="lg:w-[20%] lg:overflow-hidden lg:h-[100vh] h-[50vh]">
+            <img src="/Imgs/soldado.jpg" class="lg:h-[100vh]" alt="">
         </div>
 
         <div class="lg:w-[80%] lg:h-[100vh] justify-start lg:overflow-auto bg-zinc-950">
@@ -36,10 +36,9 @@
             </div>
 
 
-            <div class="w-[70%] m-auto">
+            <div class="w-[70%] m-auto mt-4">
 
                 <div class="max-w-sm bg-white m-auto border border-gray-100 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-
                     <div class="p-5">
 
 
