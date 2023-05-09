@@ -37,7 +37,7 @@ class AssociadoController extends Controller
     public function store(Request $request)
     {
 
-        if (session()->has('usuario')) {
+        if (session()->has('associado')) {
             return redirect()->route('catalogo');
         } else {
 
