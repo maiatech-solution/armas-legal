@@ -68,7 +68,7 @@
             </form>
         </div>
     </main>
-
+    @include('component.footer')
 
     <script>
         function simulador() {

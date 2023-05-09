@@ -2468,4 +2468,5 @@
 
 
     </main>
+@include('component.footer')
 @endsection
