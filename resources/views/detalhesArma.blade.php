@@ -2,6 +2,7 @@
 @section('content')
 <!-- Main modal -->
 <div class="relative m-auto  p-4">
+    <h1>{{$armas['nome']}}</h1>
     <!-- Modal content -->
     <div class="relative  bg-white rounded-lg shadow dark:bg-gray-700">
         <!-- Modal body -->
@@ -211,10 +212,10 @@
         <!-- Modal footer -->
         <div
             class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600 w-full">
-            <button data-modal-hide="defaultModal" type="button"
+            <a href="{{route('catalogo')}}"><button data-modal-hide="defaultModal" type="button"
                 class="text-white w-[30%] bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                VOLTAR
-            </button>
+                Voltar para o Catálogo
+            </button></a>
 
             <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
                 href="{{route('simulador', ['id' => $armas['id']])}}"

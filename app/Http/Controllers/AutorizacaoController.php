@@ -13,9 +13,13 @@ class AutorizacaoController extends Controller
      */
     public function index(Request $request)
     {
+        if (session()->has('associado')) {
         $dados = $request->only(['descArma', 'quantidade', 'parcela', 'totalArma']);
 
         return view('autorizacao', ['dados'=> $dados]);
+        }else{
+            return redirect()->route('index');
+        }
     }
 
     /**

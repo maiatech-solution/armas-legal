@@ -14,8 +14,13 @@ class ArmaController extends Controller
      */
     public function index($id)
     {
+        if (session()->has('associado')) {
         $arma = Arma::find($id);
         return view('detalhesArma', ['armas'=> $arma]);
+    } else {
+        return redirect()->route('index');
+    }
+
     }
 
     /**
