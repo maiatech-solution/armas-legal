@@ -19,7 +19,7 @@
                         class=" justify-between items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
                         <Label class="font-bold text-xl w-[30%] " for="arma">Valor da Arma: </Label>
                         <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center"
-                            disabled type="number" name="arma" id="arma" value="{{ $armas->preco }}">
+                            disabled type="number" name="arma" id="arma" value="{{$armas->preco}}">
                     </div>
 
                     <div
@@ -31,7 +31,7 @@
                             de Parcelas: </Label>
                             <div class="w-[70%] flex justify-center">
                                 <input class="outline-none rounded-lg w-[10%] text-xl p-2 border-none font-bold text-center"type="number"
-                                    name="quantidade" id="quantidade">
+                                    name="quantidade" id="quantidade" min="1">
                             </div>
                     </div>
 
@@ -73,7 +73,7 @@
     <script>
         function simulador() {
 
-            var arma = document.getElementById("arma").value;
+            var arma = document.querySelector("input[id=arma]").value;
             console.log('valor da arma: ' + arma)
 
             var quantidade = document.getElementById("quantidade");
