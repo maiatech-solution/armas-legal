@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Arma;
 
 class ArmaController extends Controller
 {
@@ -11,9 +12,10 @@ class ArmaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+        $arma = Arma::find($id);
+        return view('detalhesArma', ['armas'=> $arma]);
     }
 
     /**
