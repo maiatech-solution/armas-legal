@@ -61,7 +61,10 @@
                     <div class="flex lg:flex-row flex-col justify-around items-center w-[100%]">
 
                             <button type="button" class="lg:w-[30%] w-[100%] gap-8 font-semibold outline-none hover:no-underline uppercase bg-blue-600 hover:bg-blue-700 border p-4 rounded-md mb-8 border-blue-700 text-white">
-                                <a href="{{ route('catalogo') }}"> Retornar ao Catálogo </a>
+                                <a href="{{ route('catalogo') }}">
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                    Retornar ao Catálogo
+                                </a>
                             </button>
 
                         <button type="submit" id="simulacao" class=" lg:w-[65%] w-[100%] outline-none font-semibold hover:no-underline uppercase bg-zinc-800 hover:bg-zinc-700 border p-4 rounded-md mb-8 border-zinc-700 text-white">
