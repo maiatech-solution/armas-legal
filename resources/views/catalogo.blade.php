@@ -36,6 +36,7 @@
             </div>
 
 
+
             <div class="w-[70%] m-auto mt-4">
 
                 <div class="max-w-sm bg-white m-auto border border-gray-100 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -45,7 +46,6 @@
                       <h5 class="mb-4 text-2xl border-b-2 font-bold tracking-tight text-center text-amber-500 dark:text-white">
                             BONUS EXCLUSIVO !!!
                         </h5>
-
                         <div class="flex justify-center mb-4">
                             <img src="../Icons/star.svg" alt="">
                             <img src="../Icons/star.svg" alt="">

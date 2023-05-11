@@ -211,17 +211,16 @@
         </div>
         <!-- Modal footer -->
         <div
-            class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b  w-full">
-            <a class="text-white w-[30%] bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  dark:focus:ring-blue-800" href="{{route('catalogo')}}">
-                <button type="button">
-                    Voltar para o Catálogo
-                </button>
+            class="flex items-center gap-4 lg:gap-0 lg:flex-row flex-col justify-around p-6 space-x-2 border-t border-gray-200 rounded-b w-[100%]">
+            <a class="text-white w-[100%] bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  dark:focus:ring-blue-800" href="{{route('catalogo')}}">
+                <i class="fa-solid fa-rotate-left"> </i>
+                    Retornar ao Catálogo
             </a>
 
-            <a class="text-white w-[70%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 text-center"
-                href="{{route('simulador', ['id' => $armas['id']])}}">
-                <button type="button">Simular Financiamento
-                </button></a>
+            <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 text-center" href="{{route('simulador', ['id' => $armas['id']])}}">
+                <i class="fa-solid fa-chart-line"> - </i>
+                    Simular Financiamento
+            </a>
         </div>
     </div>
 </main>
