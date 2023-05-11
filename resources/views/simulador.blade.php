@@ -15,12 +15,13 @@
                         <input class="outline-none w-[70%] border-none bg-transparent rounded-lg text-xl p-2 font-bold text-center"
                         type="text" value="{{$armas->tipo}} - {{$armas->fabricante}} - {{$armas->nome}} - {{$armas->calibre}}" name="descArma">
                     </div>
+
                     <div
                         class=" justify-between items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
                         <Label class="font-bold text-xl w-[30%] " for="arma">Valor da Arma: </Label>
                         <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center"
                             readonly type="number" name="arma" id="arma"
-                            value="{{ number_format(((float) $armas->preco / 100 * 0.74) + (float) $armas->preco,2,",",".") }}">
+                            value="{{number_format(($armas->preco / 100 * 0.74) + $armas->preco,2,",",".")}}">
 
                     </div>
 
