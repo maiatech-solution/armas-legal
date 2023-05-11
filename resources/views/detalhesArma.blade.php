@@ -1,14 +1,14 @@
 @extends('template')
 @section('content')
 <!-- Main modal -->
-<div class="relative m-auto  p-4">
-    <h1>{{$armas['nome']}}</h1>
+<main class="flex flex-col">
+    <h1 class="text-center text-2xl text-white m-8">{{$armas->tipo}} - {{$armas->fabricante}} - {{$armas['nome']}}</h1>
     <!-- Modal content -->
-    <div class="relative  bg-white rounded-lg shadow dark:bg-gray-700">
+    <div class="lg:w-[50%] m-auto bg-white rounded-lg shadow dark:bg-gray-700">
         <!-- Modal body -->
         <div class="p-6 rounded-t space-y-6">
 
-            <div id="default-carousel" class="lg:block hidden relative w-full"
+            <div class="lg:block hidden relative w-full"
                 data-carousel="slide">
                 <!-- Carousel wrapper -->
                 <div
@@ -88,7 +88,7 @@
 
             <div class="flex lg:flex-row flex-col gap-4 justify-center">
                 <div>
-                    <H3 class="text-black font-bold">DETALHES TÉCNICOS</H3>
+                    <H3 class="text-black text-center font-bold">DETALHES TÉCNICOS</H3>
                     <table
                         class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -156,7 +156,7 @@
                 </div>
 
                 <div>
-                    <H3 class="text-black font-bold">INFORMAÇÕES</H3>
+                    <H3 class="text-black font-bold text-center">INFORMAÇÕES</H3>
                     <table
                         class=" m-auto text-sm text-white bg-gray-800 text-left">
 
@@ -199,7 +199,7 @@
                         <tr class="text-center">
                             <td scope="row" class="px-6 py-4 border">PREÇO
                                 À VISTA</th>
-                            <td scope="row" class="px-6 py-4 border"> R$
+                            <td scope="row" class="px-6 py-4 border font-bold"> R$
                                 {{ number_format(((float)$armas['preco']/100*0.74)+(float)$armas['preco'],2,",",".")}}
                             </td>
                         </tr>
@@ -211,17 +211,18 @@
         </div>
         <!-- Modal footer -->
         <div
-            class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600 w-full">
-            <a href="{{route('catalogo')}}"><button data-modal-hide="defaultModal" type="button"
-                class="text-white w-[30%] bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Voltar para o Catálogo
-            </button></a>
+            class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b  w-full">
+            <a class="text-white w-[30%] bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  dark:focus:ring-blue-800" href="{{route('catalogo')}}">
+                <button type="button">
+                    Voltar para o Catálogo
+                </button>
+            </a>
 
-            <a class="text-white w-[100%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5"
-                href="{{route('simulador', ['id' => $armas['id']])}}"
-                target="_blank"><button type="button">Simular Financiamento
+            <a class="text-white w-[70%] bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 text-center"
+                href="{{route('simulador', ['id' => $armas['id']])}}">
+                <button type="button">Simular Financiamento
                 </button></a>
         </div>
     </div>
-</div>
+</main>
 @endsection

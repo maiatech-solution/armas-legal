@@ -91,18 +91,18 @@
                                 <div
                                     class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
                                     <!-- Img da arma -->
-                                    <div class="mb-4 w-[15em]">
-                                        <img class="rounded-md" src="{{$pistolaT->img1}}" alt="pistola taurus">
+                                    <div class="mb-4 w-[15em] flex flex-wrap">
+                                        <img class="rounded-md w-[100%] h-[100%]" src="{{$pistolaT->img1}}" alt="pistola taurus">
                                     </div>
                                     <!-- Corpo do card -->
-                                    <div class="text-center flex flex-col text-white gap-2">
-                                        <p>PT {{ $pistolaT->nome }}</p>
+                                    <div class="text-center flex justify-center flex-col text-white gap-2">
+                                        <p>{{ $pistolaT->nome }}</p>
                                         <span>Calibre: {{ $pistolaT->calibre }}</span>
                                         <span>Capacidade de tiro {{ $pistolaT->capacidade_tiro }}</span>
 
                                         <!-- Botão de detalhe -->
-                                        <a href="{{route('detalhe',['id'=>$pistolaT->id])}}"><button
-                                            class="block text-white bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                        <a class="block text-white border border-red-900 bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="{{route('detalhe',['id'=>$pistolaT->id])}}">
+                                            <button
                                             type="button">
                                             Mais detalhes
                                         </button> </a>
