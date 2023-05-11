@@ -21,7 +21,7 @@
                         <Label class="font-bold text-xl w-[30%] " for="arma">Valor da Arma: </Label>
                         <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center"
                             readonly type="number" name="arma" id="arma"
-                            value="{{number_format(($armas->preco / 100 * 0.74) + $armas->preco,2,",",".")}}">
+                            value="{{($armas->preco*0.74/100)+$armas->preco}}">
 
                     </div>
 
