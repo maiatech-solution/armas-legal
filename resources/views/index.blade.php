@@ -5,7 +5,7 @@
             <img src="http://faspmpa.com.br/wp-content/uploads/fuzil.jpg" class="bg-cover bg-transparent" alt="">
         </section>
         <section class="items-center flex flex-col p-4 lg:p-0 lg:w-[30vw] w-[100%] justify-center m-auto">
-            <div class="w-[100px]"><img src="./imgs/fas.png" alt=""></div>
+            <div class="w-[100px]"><img src="http://faspmpa.com.br/wp-content/uploads/fas.png" alt="logo"></div>
             <div class="m-8">
                 <h2>Entre com suas credênciais</h2>
                 @if ($errors->any())
