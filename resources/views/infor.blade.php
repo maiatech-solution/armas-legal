@@ -122,38 +122,6 @@
                                         target="_blank">(clique para ir para o site)</a>
                                 </li>
 
-                                <li>
-                                    08 - Certidões Negativas:
-                                    <ul class="pl-5 mt-2 space-y-1 list-disc list-inside">
-                                        <li>
-                                            <a href="https://portal.trf1.jus.br/Servicos/Certidao/">JUSTIÇA FEDERAL;</a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="https://consultas.tjpa.jus.br/certidao/pages/pesquisaGeralCentralCertidao.action">JUSTIÇA
-                                                ESTADUAL;</a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="https://www.stm.jus.br/servicos-stm/certidao-negativa/emitir-certidao-negativa">JUSTIÇA
-                                                MILITAR FEDERAL;</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://consultas.tjpa.jus.br/certidaomilitar/pages/InicioCertidao.action">JUSTIÇA
-                                                MILITAR ESTADUAL;</a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="https://www.tse.jus.br/servicos-eleitorais/certidoes/certidao-de-crimes-eleitorais">JUSTIÇA
-                                                ELEITORAL;</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://antecedentes.policiacivil.pa.gov.br/consulta">POLÍCIA CIVIL;</a>
-                                        </li>
-                                        <li>CORREGEDORIA PM. (VIA PAE OU PRESENCIAL)</li>
-                                    </ul>
-                                </li>
-
                             </ul>
                         </div>
                     </div>
