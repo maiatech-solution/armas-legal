@@ -4,7 +4,7 @@
 
 
         <div class="h-[50vh] border-b-2 flex flex-wrap bg-cover bg-img">
-            <img class="h-[100%] w-[100%]" src="../imgs/capa-infor.jpg" alt="" />
+            <img class="h-[100%] w-[100%]" src="http://faspmpa.com.br/wp-content/uploads/capa-infor.jpg" alt="capa infor" />
         </div>
 
         <div id="alert-border-3" class="flex p-4 mb-4 text-green-800 mt-8 w-[90%] m-auto border-t-4 border-green-300 bg-green-50 dark:text-green-400 dark:bg-gray-800 dark:border-green-800" role="alert">
@@ -120,38 +120,6 @@
                                     <a class="text-blue-600 font-bold"
                                         href="https://consulta.tesouro.fazenda.gov.br/gru_novosite/gru_simples.asp"
                                         target="_blank">(clique para ir para o site)</a>
-                                </li>
-
-                                <li>
-                                    08 - Certidões Negativas:
-                                    <ul class="pl-5 mt-2 space-y-1 list-disc list-inside">
-                                        <li>
-                                            <a href="https://portal.trf1.jus.br/Servicos/Certidao/">JUSTIÇA FEDERAL;</a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="https://consultas.tjpa.jus.br/certidao/pages/pesquisaGeralCentralCertidao.action">JUSTIÇA
-                                                ESTADUAL;</a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="https://www.stm.jus.br/servicos-stm/certidao-negativa/emitir-certidao-negativa">JUSTIÇA
-                                                MILITAR FEDERAL;</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://consultas.tjpa.jus.br/certidaomilitar/pages/InicioCertidao.action">JUSTIÇA
-                                                MILITAR ESTADUAL;</a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="https://www.tse.jus.br/servicos-eleitorais/certidoes/certidao-de-crimes-eleitorais">JUSTIÇA
-                                                ELEITORAL;</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://antecedentes.policiacivil.pa.gov.br/consulta">POLÍCIA CIVIL;</a>
-                                        </li>
-                                        <li>CORREGEDORIA PM. (VIA PAE OU PRESENCIAL)</li>
-                                    </ul>
                                 </li>
 
                             </ul>
