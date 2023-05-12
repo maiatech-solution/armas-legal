@@ -18,10 +18,12 @@
 
                     <div
                         class=" justify-between items-center flex w-[90%] lg:flex-row flex-col overflow-hidden lg:gap-8">
-                        <Label class="font-bold text-xl w-[30%] " for="arma">Valor da Arma: </Label>
-                        <input class="outline-none w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center"
+                        <input class="outline-none hidden w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center"
+                            readonly type="number" name="arma" id="armaCalculada"
+                            value="" id="armaCalculada">
+                        <input class="outline-none hidden w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center"
                             readonly type="number" name="arma" id="arma"
-                            value="{{($armas->preco*0.74/100)+$armas->preco}}">
+                            value="{{$armas->preco}}">
 
                     </div>
 
@@ -33,8 +35,8 @@
             / 1 - 20% / 2 a 5 - 30% / 6 a 8 - 40% / 9 a 12 - 50% / 12 em diante - 70% / ">Número
                             de Parcelas: </Label>
                             <div class="w-[70%] flex justify-center">
-                                <input class="outline-none rounded-lg w-[10%] text-xl p-2 border-none font-bold text-center"type="number"
-                                    name="quantidade" id="quantidade" min="1">
+                                <input class="outline-none rounded-lg w-[10%] text-xl p-2 border-none font-bold text-center" type="number"
+                                    name="quantidade" id="quantidade">
                             </div>
                     </div>
 
@@ -79,8 +81,13 @@
     <script>
         function simulador() {
 
-            var arma = document.querySelector("input[id=arma]").value;
-            console.log('valor da arma: ' + arma)
+            var arma = parseFloat(document.querySelector("input[id=arma]").value);
+
+            var armaCalculada = (arma*0.74/100) + arma;
+            armaCalculada.toFixed(2);
+            console.log('calculada: '+ armaCalculada.toFixed(2))
+
+            document.getElementById('armaCalculada').value = armaCalculada.toFixed(2);
 
             var quantidade = document.getElementById("quantidade");
 
@@ -113,7 +120,7 @@
                     alert("Parcela incorreta - Parcelamos de 1 em até 24x")
                 }
 
-                var totalAPagar = ((parseInt(arma) / 100 * lucroPercentual)) + parseInt(arma);
+                var totalAPagar = (arma / 100 * lucroPercentual) + arma;
                 document.querySelector("input[id=total]").value = `${totalAPagar.toFixed(2).replace(".", ",")}`;
                 console.log("Total a pagar" + totalAPagar)
 
