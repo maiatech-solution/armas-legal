@@ -24,7 +24,6 @@
                         <input class="outline-none hidden w-[70%] bg-transparent  rounded-lg text-xl p-2 border-none font-bold text-center"
                             readonly type="number" name="arma" id="arma"
                             value="{{$armas->preco}}">
-
                     </div>
 
                     <div
@@ -62,12 +61,10 @@
                     </div>
                     <div class="flex lg:flex-row flex-col justify-around items-center w-[100%]">
 
-                            <button type="button" class="lg:w-[30%] w-[100%] gap-8 font-semibold outline-none hover:no-underline uppercase bg-blue-600 hover:bg-blue-700 border p-4 rounded-md mb-8 border-blue-700 text-white">
-                                <a href="{{ route('catalogo') }}">
+                        <a class="lg:w-[30%] w-[100%] gap-8 text-center font-semibold outline-none hover:no-underline uppercase bg-blue-600 hover:bg-blue-700 border p-4 rounded-md mb-8 border-blue-700 text-white" href="{{ route('catalogo') }}">
                                     <i class="fa-solid fa-rotate-left"></i>
-                                    Retornar ao Catálogo
-                                </a>
-                            </button>
+                                    Retornar para o Catálogo
+                            </a>
 
                         <button type="submit" id="simulacao" class=" lg:w-[65%] w-[100%] outline-none font-semibold hover:no-underline uppercase bg-zinc-800 hover:bg-zinc-700 border p-4 rounded-md mb-8 border-zinc-700 text-white">
                             Formulário para solicitação de aprovação do Financiamento
@@ -82,12 +79,13 @@
         function simulador() {
 
             var arma = parseFloat(document.querySelector("input[id=arma]").value);
-
+            console.log('calculada: '+ arma.toFixed(2))
             var armaCalculada = (arma*0.74/100) + arma;
             armaCalculada.toFixed(2);
             console.log('calculada: '+ armaCalculada.toFixed(2))
 
             document.getElementById('armaCalculada').value = armaCalculada.toFixed(2);
+            console.log('calculada: '+ armaCalculada.toFixed(2))
 
             var quantidade = document.getElementById("quantidade");
 

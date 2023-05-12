@@ -5,7 +5,7 @@
             <img src="http://faspmpa.com.br/wp-content/uploads/fuzil.jpg" class="bg-cover bg-transparent" alt="">
         </section>
         <section class="items-center flex flex-col p-4 lg:p-0 lg:w-[30vw] w-[100%] justify-center m-auto">
-            <div class="w-[100px]"><img src="http://faspmpa.com.br/wp-content/uploads/fas.png" alt="logo"></div>
+            <div class="w-[100px]"><img src="http://faspmpa.com.br/wp-content/uploads/fas.png" alt=""></div>
             <div class="m-8">
                 <h2>Entre com suas credênciais</h2>
                 @if ($errors->any())
@@ -26,11 +26,11 @@
                 </div>
                 <div class="flex  flex-col justify-between items-center">
                     <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" class="w-[70%] rounded-xl text-black" value="{{ old('cpf') }}" max="11" placeholder="Digite apenas os numeros do CPF" required>
+                    <input type="text" id="cpf" name="cpf" class="w-[70%] rounded-xl text-black" value="{{ old('cpf') }}" max="11" min="10" placeholder="Digite apenas os numeros do CPF" required>
                 </div>
                 <div class="flex  flex-col justify-between items-center">
                     <label for="matricula">Matrícula:</label>
-                    <input type="text" id="matricula" name="matricula" class="w-[70%] rounded-xl text-black" value="{{ old('matricula') }}" placeholder="Digite a MF sem o dígito verificador" required>
+                    <input type="text" id="matricula" name="matricula" class="w-[70%] rounded-xl text-black" value="{{ old('matricula') }}" min="6" max="9" placeholder="Digite a MF sem o dígito verificador" required>
                 </div>
                 <div class="flex mt-4 flex-col mb-4 justify-between items-center">
                     <button type="submit"

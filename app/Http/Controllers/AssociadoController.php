@@ -36,14 +36,13 @@ class AssociadoController extends Controller
      */
     public function store(Request $request)
     {
-
         if (session()->has('associado')) {
             return redirect()->route('catalogo');
         } else {
 
             $request->validate([
-                'cpf' => 'required|string|min:10|max:11',
-                'matricula' => 'required|string',
+                'cpf' => 'required|string|min:10|min:10|max:11',
+                'matricula' => 'required|string|min:6|max:8',
                 'nome' => 'required|string',
             ]);
 
@@ -60,7 +59,7 @@ class AssociadoController extends Controller
 
                 return redirect()->route('catalogo');
             } else {
-                return redirect()->route('index');
+                return redirect()->back();
             }
         }
     }

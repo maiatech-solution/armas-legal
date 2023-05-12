@@ -95,17 +95,17 @@
                                         <img class="rounded-md w-[100%] h-[100%]" src="{{$pistolaT->img1}}" alt="pistola taurus">
                                     </div>
                                     <!-- Corpo do card -->
-                                    <div class="text-center flex justify-center flex-col text-white gap-2">
+                                    <div class="text-center w-[100%] flex justify-center flex-col text-white gap-2">
                                         <p>{{ $pistolaT->nome }}</p>
                                         <span>Calibre: {{ $pistolaT->calibre }}</span>
                                         <span>Capacidade de tiro {{ $pistolaT->capacidade_tiro }}</span>
 
                                         <!-- Botão de detalhe -->
                                         <a class="block text-white border border-red-900 bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="{{route('detalhe',['id'=>$pistolaT->id])}}">
-                                            <button
-                                            type="button">
-                                            Mais detalhes
-                                        </button> </a>
+                                            <button type="button">
+                                                Mais detalhes
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
                             @endforeach
@@ -113,26 +113,27 @@
                     </div>
 
                     <!-- Revólveres ---->
-                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
+                    <div  class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col flex-wrap mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Revólveres</h2>
+
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
                             @foreach ($revolverTaurus as $revolverT)
                                 <!-- Card da arma -->
                                 <div
-                                    class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
+                                class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
                                     <!-- Img da arma -->
                                     <div class="mb-4 w-[15em]">
                                         <img class="rounded-md" src="{{$revolverT->img1}}" alt="pistola taurus">
                                     </div>
                                     <!-- Corpo do card -->
-                                    <div class="text-center flex flex-col text-white gap-2">
+                                    <div class="text-center w-[100%] flex justify-center flex-col text-white gap-2">
                                         <p>PT {{ $revolverT->nome }}</p>
                                         <span>Calibre: {{ $revolverT->calibre }}</span>
                                         <span>Capacidade de tiro {{ $revolverT->capacidade_tiro }}</span>
 
                                          <!-- Botão de detalhe -->
-                                         <a href="{{route('detalhe',['id'=>$revolverT->id])}}"><button
-                                            class="block text-white bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                         <a class="block text-white border border-red-900 bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="{{route('detalhe',['id'=>$revolverT->id])}}">
+                                            <button
                                             type="button">
                                             Mais detalhes
                                         </button> </a>
@@ -144,20 +145,19 @@
                     </div>
 
                     <!-- Armas Longas ---->
-                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
+                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col flex-wrap mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Armas Longas</h2>
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
                             @foreach ($longasTaurus as $longasT)
                                 <!-- Card da arma -->
                                 <div
-                                    class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
+                                class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
                                     <!-- Img da arma -->
                                     <div class="mb-4 w-[15em]">
                                         <img class="rounded-md" src="{{$longasT->img1}}" alt="pistola taurus">
                                     </div>
                                     <!-- Corpo do card -->
-                                    <div class="text-center flex flex-col text-white gap-2">
-                                        <p>PT {{ $longasT->nome }}</p>
+                                    <div class="text-center w-[100%] flex justify-center flex-col text-white gap-2">
                                         <span>Calibre: {{ $longasT->calibre }}</span>
                                         <span>Capacidade de tiro {{ $longasT->capacidade_tiro }}</span>
 
@@ -196,29 +196,30 @@
                     aria-labelledby="accordion-collapse-heading-2" class="">
 
                     <!-- Pistolas ---->
-                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
+                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col flex-wrap mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Pistolas</h2>
+
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
                             @foreach ($pistolaCBC as $pistolaC)
                                 <!-- Card da arma -->
                                 <div
-                                    class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
+                                class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
                                     <!-- Img da arma -->
                                     <div class="mb-4 w-[15em]">
                                         <img class="rounded-md" src="{{$pistolaC->img1}}" alt="pistola taurus">
                                     </div>
                                     <!-- Corpo do card -->
-                                    <div class="text-center flex flex-col text-white gap-2">
+                                    <div class="text-center w-[100%] flex justify-center flex-col text-white gap-2">
                                         <p>PT {{ $pistolaC->nome }}</p>
                                         <span>Calibre: {{ $pistolaC->calibre }}</span>
                                         <span>Capacidade de tiro {{ $pistolaC->capacidade_tiro }}</span>
 
                                          <!-- Botão de detalhe -->
-                                         <a href="{{route('detalhe',['id'=>$pistolaC->id])}}"><button
-                                            class="block text-white bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                            type="button">
-                                            Mais detalhes
-                                        </button> </a>
+                                         <a class="block text-white border border-red-900 bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="{{route('detalhe',['id'=>$pistolaC->id])}}">
+                                            <button type="button">
+                                                Mais detalhes
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
                             @endforeach
@@ -226,29 +227,30 @@
                     </div>
 
                     <!-- Revólveres ---->
-                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
+                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col flex-wrap mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Revólveres</h2>
+
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
                             @foreach ($revolverCBC as $revolverC)
                                 <!-- Card da arma -->
                                 <div
-                                    class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
+                                class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
                                     <!-- Img da arma -->
                                     <div class="mb-4 w-[15em]">
                                         <img class="rounded-md" src="{{$revolverC->img1}}" alt="pistola taurus">
                                     </div>
                                     <!-- Corpo do card -->
-                                    <div class="text-center flex flex-col text-white gap-2">
+                                    <div class="text-center w-[100%] flex justify-center flex-col text-white gap-2">
                                         <p>PT {{ $revolverC->nome }}</p>
                                         <span>Calibre: {{ $revolverC->calibre }}</span>
                                         <span>Capacidade de tiro {{ $revolverC->capacidade_tiro }}</span>
 
                                          <!-- Botão de detalhe -->
-                                         <a href="{{route('detalhe',['id'=>$revolverC->id])}}"><button
-                                            class="block text-white bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                            type="button">
-                                            Mais detalhes
-                                        </button> </a>
+                                         <a class="block text-white border border-red-900 bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="{{route('detalhe',['id'=>$revolverC->id])}}">
+                                            <button type="button">
+                                                Mais detalhes
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
                             @endforeach
@@ -256,29 +258,30 @@
                     </div>
 
                     <!-- Armas Longas ---->
-                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
+                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col flex-wrap mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Armas Longas</h2>
+
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
                             @foreach ($longasCBC as $longasC)
                                 <!-- Card da arma -->
                                 <div
-                                    class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
+                                class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
                                     <!-- Img da arma -->
                                     <div class="mb-4 w-[15em]">
                                         <img class="rounded-md" src="{{$longasC->img1}}" alt="pistola taurus">
                                     </div>
                                     <!-- Corpo do card -->
-                                    <div class="text-center flex flex-col text-white gap-2">
-                                        <p>PT {{ $longasC->nome }}</p>
+                                    <div class="text-center w-[100%] flex justify-center flex-col text-white gap-2">
+                                        <p>{{ $longasC->nome }}</p>
                                         <span>Calibre: {{ $longasC->calibre }}</span>
                                         <span>Capacidade de tiro {{ $longasC->capacidade_tiro }}</span>
 
                                          <!-- Botão de detalhe -->
-                                         <a href="{{route('detalhe',['id'=>$longasC->id])}}"><button
-                                            class="block text-white bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                            type="button">
-                                            Mais detalhes
-                                        </button> </a>
+                                          <a class="block text-white border border-red-900 bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="{{route('detalhe',['id'=>$longasC->id])}}">
+                                            <button type="button">
+                                                Mais detalhes
+                                            </button>
+                                        </a>
 
                                     </div>
                                 </div>
@@ -308,29 +311,30 @@
                     aria-labelledby="accordion-collapse-heading-3" class="">
 
                     <!-- Pistolas ---->
-                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
+                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col flex-wrap mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Pistolas</h2>
+
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
                             @foreach ($pistolaGlock as $pistolaG)
                                 <!-- Card da arma -->
                                 <div
-                                    class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
+                                class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
                                     <!-- Img da arma -->
                                     <div class="mb-4 w-[15em]">
                                         <img class="rounded-md" src="{{$pistolaG->img1}}" alt="pistola taurus">
                                     </div>
                                     <!-- Corpo do card -->
-                                    <div class="text-center flex flex-col text-white gap-2">
-                                        <p>PT {{ $pistolaG->nome }}</p>
+                                    <div class="text-center w-[100%] flex justify-center flex-col text-white gap-2">
+                                        <p>{{ $pistolaG->nome }}</p>
                                         <span>Calibre: {{ $pistolaG->calibre }}</span>
                                         <span>Capacidade de tiro {{ $pistolaG->capacidade_tiro }}</span>
 
                                          <!-- Botão de detalhe -->
-                                         <a href="{{route('detalhe',['id'=>$pistolaG->id])}}"><button
-                                            class="block text-white bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                            type="button">
-                                            Mais detalhes
-                                        </button> </a>
+                                         <a class="block text-white border border-red-900 bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="{{route('detalhe',['id'=>$pistolaG->id])}}">
+                                            <button type="button">
+                                                Mais detalhes
+                                            </button>
+                                        </a>
 
                                     </div>
                                 </div>
@@ -339,29 +343,29 @@
                     </div>
 
                     <!-- Revólveres ---->
-                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
+                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col flex-wrap mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Revólveres</h2>
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
                             @foreach ($revolverGlock as $revolverG)
                                 <!-- Card da arma -->
                                 <div
-                                    class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
+                                class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
                                     <!-- Img da arma -->
                                     <div class="mb-4 w-[15em]">
                                         <img class="rounded-md" src="{{$revolverG->img1}}" alt="pistola taurus">
                                     </div>
                                     <!-- Corpo do card -->
-                                    <div class="text-center flex flex-col text-white gap-2">
-                                        <p>PT {{ $revolverG->nome }}</p>
+                                    <div class="text-center w-[100%] flex justify-center flex-col text-white gap-2">
+                                        <p>{{ $revolverG->nome }}</p>
                                         <span>Calibre: {{ $revolverG->calibre }}</span>
                                         <span>Capacidade de tiro {{ $revolverG->capacidade_tiro }}</span>
 
                                          <!-- Botão de detalhe -->
-                                         <a href="{{route('detalhe',['id'=>$revolverG->id])}}"><button
-                                            class="block text-white bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                            type="button">
-                                            Mais detalhes
-                                        </button> </a>
+                                         <a class="block text-white border border-red-900 bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="{{route('detalhe',['id'=>$revolverG->id])}}">
+                                            <button type="button">
+                                                Mais detalhes
+                                            </button>
+                                        </a>
 
                                     </div>
                                 </div>
@@ -370,29 +374,29 @@
                     </div>
 
                     <!-- Armas Longas ---->
-                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col mb-8">
+                    <div class=" border-gray-800 w-[90%] m-auto pb-8 rounded-xl flex flex-col flex-wrap mb-8">
                         <h2 class="text-center m-4 text-2xl text-white">Armas Longas</h2>
                         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 m-auto">
                             @foreach ($longasGlock as $longasG)
                                 <!-- Card da arma -->
                                 <div
-                                    class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
+                                class="border w-[17em] row-span-1 h-[28em] flex flex-nowrap flex-col justify-center items-center border-gray-300  bg-gray-700 p-4 rounded-md ">
                                     <!-- Img da arma -->
                                     <div class="mb-4 w-[15em]">
                                         <img class="rounded-md" src="{{$longasG->img1}}" alt="arma longa">
                                     </div>
                                     <!-- Corpo do card -->
-                                    <div class="text-center flex flex-col text-white gap-2">
-                                        <p>PT {{ $longasG->nome }}</p>
+                                    <div class="text-center w-[100%] flex justify-center flex-col text-white gap-2">
+                                        <p>{{ $longasG->nome }}</p>
                                         <span>Calibre: {{ $longasG->calibre }}</span>
                                         <span>Capacidade de tiro {{ $longasG->capacidade_tiro }}</span>
 
                                          <!-- Botão de detalhe -->
-                                         <a href="{{route('detalhe',['id'=>$longasG->id])}}"><button
-                                            class="block text-white bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                            type="button">
-                                            Mais detalhes
-                                        </button> </a>
+                                         <a class="block text-white border border-red-900 bg-gray-900  hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="{{route('detalhe',['id'=>$longasG->id])}}">
+                                            <button type="button">
+                                                Mais detalhes
+                                            </button>
+                                        </a>
 
                                     </div>
                                 </div>
